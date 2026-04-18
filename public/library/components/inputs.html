@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inputs — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>Text Inputs</h1>
+<p>Text, email, password, number, search. Focus state uses terracotta ring. Includes disabled and error variants, plus an icon-leading variant.</p>
+
+<div class="lib-demo" style="max-width:28rem;">
+  <div class="form-group">
+    <label class="form-label" for="i1">Full name</label>
+    <input id="i1" class="input" type="text" placeholder="Jane Donohoe">
+    <span class="form-help">Use your legal name.</span>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="i2">Email</label>
+    <div class="input-with-icon">
+      <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+      <input id="i2" class="input" type="email" placeholder="you@example.com">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="i3">Password</label>
+    <input id="i3" class="input is-error" type="password" value="weak">
+    <span class="form-error">Password must be at least 8 characters.</span>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="i4">Disabled</label>
+    <input id="i4" class="input" type="text" value="Read-only value" disabled>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="form-group"&gt;
+  &lt;label class="form-label" for="x"&gt;Label&lt;/label&gt;
+  &lt;input id="x" class="input" type="text" placeholder="..."&gt;
+  &lt;span class="form-help"&gt;Helper text&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- With leading icon --&gt;
+&lt;div class="input-with-icon"&gt;
+  &lt;svg class="input-icon" .../&gt;
+  &lt;input class="input" type="email"&gt;
+&lt;/div&gt;
+
+&lt;!-- Error state --&gt;
+&lt;input class="input is-error"&gt;
+&lt;span class="form-error"&gt;...&lt;/span&gt;</code>
+<script src="../library.js"></script></main></body></html>

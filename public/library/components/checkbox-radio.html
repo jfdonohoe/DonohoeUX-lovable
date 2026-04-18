@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkbox & Radio — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>Checkbox & Radio</h1>
+<p>Custom-styled native inputs. Native input is visually hidden but remains accessible.</p>
+
+<div class="lib-demo" style="display:flex; gap:3rem; flex-wrap:wrap;">
+  <div>
+    <h4 style="margin-bottom:0.75rem;">Checkboxes</h4>
+    <label class="check-row" style="margin-bottom:0.5rem;"><input type="checkbox" checked><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-label">Email me updates</span></label>
+    <label class="check-row" style="margin-bottom:0.5rem;"><input type="checkbox"><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span class="check-label">Subscribe to newsletter</span></label>
+  </div>
+  <div>
+    <h4 style="margin-bottom:0.75rem;">Radio group</h4>
+    <label class="check-row" style="margin-bottom:0.5rem;"><input type="radio" name="plan" checked><span class="check-radio"></span><span class="check-label">Free</span></label>
+    <label class="check-row" style="margin-bottom:0.5rem;"><input type="radio" name="plan"><span class="check-radio"></span><span class="check-label">Pro</span></label>
+    <label class="check-row" style="margin-bottom:0.5rem;"><input type="radio" name="plan"><span class="check-radio"></span><span class="check-label">Enterprise</span></label>
+  </div>
+</div>
+
+<code class="lib-code">&lt;label class="check-row"&gt;
+  &lt;input type="checkbox"&gt;
+  &lt;span class="check-box"&gt;&lt;svg .../&gt;&lt;/span&gt;
+  &lt;span class="check-label"&gt;Label&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="check-row"&gt;
+  &lt;input type="radio" name="g"&gt;
+  &lt;span class="check-radio"&gt;&lt;/span&gt;
+  &lt;span class="check-label"&gt;Option&lt;/span&gt;
+&lt;/label&gt;</code>
+<script src="../library.js"></script></main></body></html>

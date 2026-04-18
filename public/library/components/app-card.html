@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>App Card — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>App Card</h1>
+<p>General-purpose elevated container for grouping content in dashboards and forms.</p>
+
+<div class="lib-demo" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem;">
+  <div class="app-card">
+    <h4>Atlas Redesign</h4>
+    <p style="font-size:0.85rem; color:hsl(var(--text-subtle)); margin:0 0 1rem;">Brand + product refresh.</p>
+    <span class="status-pill status-success">Active</span>
+  </div>
+  <div class="app-card">
+    <h4>Field Research</h4>
+    <p style="font-size:0.85rem; color:hsl(var(--text-subtle)); margin:0 0 1rem;">Q3 user interviews.</p>
+    <span class="status-pill status-info">Planning</span>
+  </div>
+  <div class="app-card">
+    <h4>Pattern Library</h4>
+    <p style="font-size:0.85rem; color:hsl(var(--text-subtle)); margin:0 0 1rem;">Component v2 rollout.</p>
+    <span class="status-pill status-warn">At risk</span>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="app-card"&gt;
+  &lt;h4&gt;Title&lt;/h4&gt;
+  &lt;p&gt;Description&lt;/p&gt;
+  &lt;span class="status-pill status-success"&gt;Active&lt;/span&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

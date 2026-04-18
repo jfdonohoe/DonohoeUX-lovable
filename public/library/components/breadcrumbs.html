@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Breadcrumbs — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>Breadcrumbs</h1>
+<p>Hierarchy trail for nested pages. Last item is non-clickable current page.</p>
+
+<div class="lib-demo">
+  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+    <ol class="breadcrumb-list">
+      <li><a href="#">Workspace</a></li>
+      <li class="breadcrumb-sep">/</li>
+      <li><a href="#">Projects</a></li>
+      <li class="breadcrumb-sep">/</li>
+      <li><a href="#">Atlas Redesign</a></li>
+      <li class="breadcrumb-sep">/</li>
+      <li class="breadcrumb-current" aria-current="page">Brand</li>
+    </ol>
+  </nav>
+</div>
+
+<code class="lib-code">&lt;nav class="breadcrumb-nav"&gt;
+  &lt;ol class="breadcrumb-list"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-sep"&gt;/&lt;/li&gt;
+    &lt;li class="breadcrumb-current"&gt;Page&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code>
+<script src="../library.js"></script></main></body></html>

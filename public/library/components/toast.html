@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Toast — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>Toast Notifications</h1>
+<p>Transient feedback in the top-right. Auto-dismisses after 3.2s. Trigger via <code>data-toast</code> or <code>window.libToast(msg, variant)</code>.</p>
+
+<div class="lib-demo" style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+  <button class="btn btn-primary" data-toast="success" data-toast-msg="Profile saved">Show success</button>
+  <button class="btn btn-secondary" style="border:1px solid hsl(var(--border));" data-toast="info" data-toast-msg="Sync started">Show info</button>
+  <button class="btn btn-secondary" style="border:1px solid hsl(var(--border));" data-toast="" data-toast-msg="Generic message">Show default</button>
+</div>
+
+<code class="lib-code">&lt;!-- Declarative --&gt;
+&lt;button data-toast="success" data-toast-msg="Saved"&gt;Save&lt;/button&gt;
+
+&lt;!-- Programmatic --&gt;
+&lt;script&gt;window.libToast("Hello!", "success");&lt;/script&gt;</code>
+<script src="../library.js"></script></main></body></html>

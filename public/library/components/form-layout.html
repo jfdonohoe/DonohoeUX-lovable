@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Form Layout — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>Form Layout</h1>
+<p>Standard sectioned form: header, grouped fields, helper text, footer with primary + secondary actions. Wrap in <code>.app-card</code> for elevation.</p>
+
+<div class="lib-demo">
+  <form class="app-card" style="max-width:36rem;" onsubmit="event.preventDefault(); window.libToast('Profile saved','success');">
+    <h4>Account profile</h4>
+    <p style="font-size:0.85rem; color:hsl(var(--text-subtle)); margin:0 0 1.25rem;">Update your name and contact details.</p>
+
+    <div class="form-group">
+      <label class="form-label" for="fn">Display name</label>
+      <input id="fn" class="input" type="text" value="Jane Donohoe">
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="fe">Email</label>
+      <input id="fe" class="input" type="email" value="jane@donohoe.ux">
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="fr">Role</label>
+      <select id="fr" class="select"><option>Designer</option><option>Researcher</option><option>Engineer</option></select>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="fb">Bio</label>
+      <textarea id="fb" class="textarea">Designing systems that feel inevitable.</textarea>
+    </div>
+    <label class="check-row" style="margin:0.5rem 0 1.25rem;">
+      <input type="checkbox" checked><span class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      <span class="check-label">Make profile public</span>
+    </label>
+    <div style="display:flex; gap:0.625rem; justify-content:flex-end;">
+      <button type="button" class="btn btn-secondary">Cancel</button>
+      <button type="submit" class="btn btn-primary">Save changes</button>
+    </div>
+  </form>
+</div>
+
+<code class="lib-code">&lt;form class="app-card"&gt;
+  &lt;h4&gt;Section title&lt;/h4&gt;
+  &lt;div class="form-group"&gt;...&lt;/div&gt;
+  &lt;div class="form-group"&gt;...&lt;/div&gt;
+  &lt;div style="display:flex; gap:.625rem; justify-content:flex-end;"&gt;
+    &lt;button class="btn btn-secondary"&gt;Cancel&lt;/button&gt;
+    &lt;button class="btn btn-primary"&gt;Save&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code>
+<script src="../library.js"></script></main></body></html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dropdown — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>Dropdown Menu</h1>
+<p>Click-to-toggle menu. Closes on outside click. Use for actions, profile menus, filters.</p>
+
+<div class="lib-demo" style="display:flex; gap:1rem;">
+  <div class="dropdown" data-dropdown>
+    <button class="btn btn-secondary" data-dropdown-trigger style="border:1px solid hsl(var(--border));">
+      Actions
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="dropdown-menu">
+      <button>Edit project</button>
+      <button>Duplicate</button>
+      <button>Share link</button>
+      <div class="dropdown-divider"></div>
+      <button style="color:hsl(var(--accent-warm-dark));">Delete</button>
+    </div>
+  </div>
+
+  <div class="dropdown" data-dropdown>
+    <button class="btn btn-secondary" data-dropdown-trigger style="border:1px solid hsl(var(--border));">
+      <span class="avatar avatar-sm">JD</span> Jane Donohoe
+    </button>
+    <div class="dropdown-menu">
+      <a href="#">Profile</a>
+      <a href="#">Settings</a>
+      <a href="#">Billing</a>
+      <div class="dropdown-divider"></div>
+      <a href="#">Sign out</a>
+    </div>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="dropdown" data-dropdown&gt;
+  &lt;button data-dropdown-trigger&gt;Actions&lt;/button&gt;
+  &lt;div class="dropdown-menu"&gt;
+    &lt;button&gt;Edit&lt;/button&gt;
+    &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+    &lt;button&gt;Delete&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>
