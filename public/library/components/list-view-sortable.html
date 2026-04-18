@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>List View — Sortable — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>List View — Sortable</h1>
+<p>Click any column header to sort ascending; click again to flip to descending. JS hook: wrap in <code>[data-sortable-list]</code>, give the body <code>[data-list-body]</code>, and put a <code>.list-sort</code> button in each header cell with <code>data-key</code> and <code>data-type="string|number"</code>. Cells reference their key via <code>data-cell="key"</code>; numeric cells should also include <code>data-value</code> for the raw number.</p>
+
+<div class="lib-demo">
+  <div class="list-view" data-sortable-list>
+    <div class="list-row list-head" style="grid-template-columns: 2fr 1.4fr 1fr 1fr 1fr;">
+      <div class="list-cell"><button class="list-sort" data-key="name" data-type="string" data-sort="asc">Project <svg class="sort-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button></div>
+      <div class="list-cell"><button class="list-sort" data-key="owner" data-type="string">Owner <svg class="sort-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button></div>
+      <div class="list-cell"><button class="list-sort" data-key="status" data-type="string">Status <svg class="sort-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button></div>
+      <div class="list-cell"><button class="list-sort" data-key="updated" data-type="number">Updated <svg class="sort-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button></div>
+      <div class="list-cell cell-right"><button class="list-sort" data-key="spend" data-type="number">Spend <svg class="sort-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button></div>
+    </div>
+    <div class="list-body" data-list-body>
+      <div class="list-row" style="grid-template-columns: 2fr 1.4fr 1fr 1fr 1fr;">
+        <div class="list-cell cell-strong" data-cell="name" data-label="Project">Atlas Redesign</div>
+        <div class="list-cell" data-cell="owner" data-label="Owner"><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">JD</span> Jane D.</div></div>
+        <div class="list-cell" data-cell="status" data-value="1" data-label="Status"><span class="status-pill status-success">Active</span></div>
+        <div class="list-cell" data-cell="updated" data-value="2" data-label="Updated">2h ago</div>
+        <div class="list-cell cell-right" data-cell="spend" data-value="48200" data-label="Spend">$48,200</div>
+      </div>
+      <div class="list-row" style="grid-template-columns: 2fr 1.4fr 1fr 1fr 1fr;">
+        <div class="list-cell cell-strong" data-cell="name" data-label="Project">Field Research Q3</div>
+        <div class="list-cell" data-cell="owner" data-label="Owner"><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">RM</span> Rae M.</div></div>
+        <div class="list-cell" data-cell="status" data-value="2" data-label="Status"><span class="status-pill status-info">Planning</span></div>
+        <div class="list-cell" data-cell="updated" data-value="24" data-label="Updated">Yesterday</div>
+        <div class="list-cell cell-right" data-cell="spend" data-value="12500" data-label="Spend">$12,500</div>
+      </div>
+      <div class="list-row" style="grid-template-columns: 2fr 1.4fr 1fr 1fr 1fr;">
+        <div class="list-cell cell-strong" data-cell="name" data-label="Project">Pattern Library v2</div>
+        <div class="list-cell" data-cell="owner" data-label="Owner"><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">SK</span> Sam K.</div></div>
+        <div class="list-cell" data-cell="status" data-value="3" data-label="Status"><span class="status-pill status-warn">At risk</span></div>
+        <div class="list-cell" data-cell="updated" data-value="72" data-label="Updated">3d ago</div>
+        <div class="list-cell cell-right" data-cell="spend" data-value="31000" data-label="Spend">$31,000</div>
+      </div>
+      <div class="list-row" style="grid-template-columns: 2fr 1.4fr 1fr 1fr 1fr;">
+        <div class="list-cell cell-strong" data-cell="name" data-label="Project">Onboarding Flow</div>
+        <div class="list-cell" data-cell="owner" data-label="Owner"><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">TO</span> Tomi O.</div></div>
+        <div class="list-cell" data-cell="status" data-value="4" data-label="Status"><span class="status-pill status-neutral">Archived</span></div>
+        <div class="list-cell" data-cell="updated" data-value="168" data-label="Updated">Last week</div>
+        <div class="list-cell cell-right" data-cell="spend" data-value="9800" data-label="Spend">$9,800</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="list-view" data-sortable-list&gt;
+  &lt;div class="list-row list-head" style="grid-template-columns: 2fr 1fr 1fr;"&gt;
+    &lt;div class="list-cell"&gt;
+      &lt;button class="list-sort" data-key="name" data-type="string" data-sort="asc"&gt;
+        Name &lt;svg class="sort-icon" .../&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="list-cell"&gt;
+      &lt;button class="list-sort" data-key="spend" data-type="number"&gt;Spend &lt;svg .../&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="list-body" data-list-body&gt;
+    &lt;div class="list-row" style="grid-template-columns: 2fr 1fr 1fr;"&gt;
+      &lt;div class="list-cell" data-cell="name"&gt;Atlas&lt;/div&gt;
+      &lt;div class="list-cell" data-cell="spend" data-value="48200"&gt;$48,200&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>
