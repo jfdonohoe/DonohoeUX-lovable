@@ -101,10 +101,9 @@
     color: hsl(var(--accent-warm));
   }
 
-  .text-display { color: hsl(var(--text-display)); }
-  .text-body-c { color: hsl(var(--text-body)); }
-  .text-subtle-c { color: hsl(var(--text-subtle)); }
-  .text-accent { color: hsl(var(--accent-warm)); font-weight: 600; }
+  /* NOTE: site-specific text color tokens live in @layer utilities below
+     so they override Tailwind's generated utilities (e.g. text-accent
+     from the shadcn `accent` color). */
 
   /* Buttons */
   .btn {
@@ -246,17 +245,40 @@
 }
 
 @layer utilities {
+  /* ---- Site text-color tokens (mirror original styles.css 1:1) ----
+     Defined in @layer utilities so they reliably override Tailwind's
+     generated `text-accent` (mapped to the neutral shadcn --accent token)
+     and any conflicting utilities. */
+  .text-accent { color: hsl(var(--accent-warm)); font-weight: 600; }
+  .text-accent-home { color: hsl(var(--accent-warm)); font-weight: 200; }
+  .text-display { color: hsl(var(--text-display)); }
+  .text-subtle { color: hsl(var(--text-subtle)); }
+  .text-body { color: hsl(var(--text-body)); }
+  .bold { font-weight: 600; }
+  .italic { font-style: italic; }
+
+  /* Backgrounds */
   .bg-surface-warm { background-color: hsl(var(--surface-warm)); }
   .bg-surface-elevated { background-color: hsl(var(--surface-elevated)); }
   .bg-accent-warm { background-color: hsl(var(--accent-warm)); }
   .bg-accent-warm-light { background-color: hsl(var(--accent-warm-light)); }
+  .bg-accent-warm-dark { background-color: hsl(var(--accent-warm-dark)); }
+  .bg-fill-blue { background-color: hsl(var(--fill-blue)); }
   .bg-fill-blue-light { background-color: hsl(var(--fill-blue-light)); }
+  .bg-fill-blue-dark { background-color: hsl(var(--fill-blue-dark)); }
+  .bg-fill-purp { background-color: hsl(var(--fill-purp)); }
   .bg-fill-purp-light { background-color: hsl(var(--fill-purp-light)); }
+  .bg-fill-purp-dark { background-color: hsl(var(--fill-purp-dark)); }
+  .bg-fill-green { background-color: hsl(var(--fill-green)); }
   .bg-fill-green-light { background-color: hsl(var(--fill-green-light)); }
+  .bg-fill-green-dark { background-color: hsl(var(--fill-green-dark)); }
+
+  /* Aliased text/border helpers used by Tailwind class names */
   .text-text-display { color: hsl(var(--text-display)); }
   .text-text-body { color: hsl(var(--text-body)); }
   .text-text-subtle { color: hsl(var(--text-subtle)); }
   .text-accent-warm { color: hsl(var(--accent-warm)); }
+  .text-accent-warm-dark { color: hsl(var(--accent-warm-dark)); }
   .border-border-light { border-color: hsl(var(--border-light)); }
 }
 
