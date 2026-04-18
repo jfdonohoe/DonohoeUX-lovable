@@ -652,22 +652,26 @@
       const s = nodeMap[l.source], t = nodeMap[l.target];
       const sH = s.h * (l.value / s.outgoing);
       const tH = t.h * (l.value / t.incoming);
-      const sy = (srcCursor[s.id] = (srcCursor[s.id] || s.y)) + sH / 2;
+      const sy0 = (srcCursor[s.id] = (srcCursor[s.id] || s.y));
       srcCursor[s.id] += sH;
-      const ty = (tgtCursor[t.id] = (tgtCursor[t.id] || t.y)) + tH / 2;
+      const ty0 = (tgtCursor[t.id] = (tgtCursor[t.id] || t.y));
       tgtCursor[t.id] += tH;
       const x0 = s.x + colW, x1 = t.x;
       const mid = (x0 + x1) / 2;
+      // Filled band: top curve from (x0, sy0) → (x1, ty0), bottom curve back
+      // from (x1, ty0+tH) → (x0, sy0+sH). This makes link width match the
+      // node slot at each end (no overlap or apparent duplicate strands).
+      const d = `M${x0} ${sy0} C${mid} ${sy0}, ${mid} ${ty0}, ${x1} ${ty0} ` +
+                `L${x1} ${ty0 + tH} C${mid} ${ty0 + tH}, ${mid} ${sy0 + sH}, ${x0} ${sy0 + sH} Z`;
       const path = el("path", {
-        d: `M${x0} ${sy} C${mid} ${sy}, ${mid} ${ty}, ${x1} ${ty}`,
-        stroke: colors[li % colors.length],
-        "stroke-width": Math.max(1, Math.min(sH, tH)),
-        "stroke-opacity": 0.35,
-        fill: "none",
+        d,
+        fill: colors[li % colors.length],
+        "fill-opacity": 0.35,
+        stroke: "none",
         class: "viz-arc"
       });
       // mouseover/mousemove (instead of mouseenter/leave) prevents flicker
-      // when the cursor crosses between overlapping link paths.
+      // when the cursor crosses between overlapping link bands.
       const tipText = `<strong>${s.label} → ${t.label}</strong> · ${l.value}`;
       path.addEventListener("mouseover", e => { const xy = ptToContainer(host, e); tip.show(tipText, xy.x, xy.y); });
       path.addEventListener("mousemove", e => { const xy = ptToContainer(host, e); tip.show(tipText, xy.x, xy.y); });
