@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tabs — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Module — Interactive</p><h1>Tabs</h1>
+<p>Underlined tab bar with switchable panels. Click any tab to swap the panel.</p>
+<div class="lib-meta"><span><strong>JS hooks:</strong> data-tabs · .tab-btn · .tab-panel</span></div>
+
+<div data-tabs style="margin-top:1.5rem;">
+  <div class="tabs">
+    <button class="tab-btn active">Overview</button>
+    <button class="tab-btn">Process</button>
+    <button class="tab-btn">Outcomes</button>
+  </div>
+  <div class="tab-panel active"><h3 class="font-serif">Overview</h3><p>Panel one content. Switch tabs to see other panels.</p></div>
+  <div class="tab-panel"><h3 class="font-serif">Process</h3><p>Panel two content describing the process.</p></div>
+  <div class="tab-panel"><h3 class="font-serif">Outcomes</h3><p>Panel three content with results and metrics.</p></div>
+</div>
+
+<code class="lib-code">&lt;div data-tabs&gt;
+  &lt;div class="tabs"&gt;
+    &lt;button class="tab-btn active"&gt;Overview&lt;/button&gt;
+    &lt;button class="tab-btn"&gt;Process&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tab-panel active"&gt;…&lt;/div&gt;
+  &lt;div class="tab-panel"&gt;…&lt;/div&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

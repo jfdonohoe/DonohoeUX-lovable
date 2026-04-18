@@ -48,10 +48,24 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-12 pt-8 border-t border-border-light flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div className="mt-12 pt-8 border-t border-border-light flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
         <p className="text-sm text-text-subtle">
           © {new Date().getFullYear()} John Donohoe. Designed with care.
         </p>
+        <span className="hidden sm:inline text-text-subtle">·</span>
+        <a
+          href="/standalone/index.html"
+          className="text-sm text-text-subtle hover:text-accent-warm transition-colors"
+        >
+          Standalone HTML version
+        </a>
+        <span className="hidden sm:inline text-text-subtle">·</span>
+        <a
+          href="/library/index.html"
+          className="text-sm text-text-subtle hover:text-accent-warm transition-colors"
+        >
+          Component Library
+        </a>
       </div>
     </div>
   </footer>

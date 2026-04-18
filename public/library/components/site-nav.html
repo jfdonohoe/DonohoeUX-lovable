@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Site Nav — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap" style="padding-top:8rem;">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Layout</p><h1>Site Nav</h1>
+<p>Fixed top bar with backdrop blur. The active page link is auto-highlighted by <code>library.js</code> matching <code>data-route</code> against the current filename. Add <code>active</code> manually for static demos.</p>
+
+<header class="site-nav" style="position:relative;margin:1.5rem 0 0;">
+  <nav class="container-page nav-row">
+    <a href="#" class="nav-logo" aria-label="Home"><img src="../assets/about_history.png" alt="Logo"></a>
+    <ul>
+      <li><a href="#" class="active">About</a></li>
+      <li><a href="#">Case Studies</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<h2 style="margin-top:2rem;">Snippet</h2>
+<code class="lib-code">&lt;header class="site-nav"&gt;
+  &lt;nav class="container-page nav-row"&gt;
+    &lt;a href="index.html" class="nav-logo" aria-label="Home"&gt;
+      &lt;img src="assets/headshot.png" alt="John Donohoe"&gt;
+    &lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="index.html" data-route="index.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="case-study.html" data-route="case-study.html"&gt;Case Studies&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="contact.html" data-route="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code>
+<script src="../library.js"></script></main></body></html>

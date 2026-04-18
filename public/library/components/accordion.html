@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accordion — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Module — Interactive</p><h1>Accordion</h1>
+<p>Click any row to expand/collapse. Multiple can be open at once.</p>
+<div class="lib-meta"><span><strong>JS hooks:</strong> data-accordion · .accordion-item · .acc-trigger · .acc-panel</span></div>
+
+<div data-accordion style="margin-top:1.5rem;">
+  <div class="accordion-item">
+    <button class="acc-trigger">What is the design philosophy? <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="acc-panel"><div class="acc-panel-inner"><p>Designing with empathy, building with purpose. Warmth over cleverness; clarity over density.</p></div></div>
+  </div>
+  <div class="accordion-item">
+    <button class="acc-trigger">How do I use the color tokens? <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="acc-panel"><div class="acc-panel-inner"><p>Reference any color with <code>hsl(var(--token))</code>, or use the utility classes like <code>.bg-fill-blue-light</code> and <code>.text-accent</code>.</p></div></div>
+  </div>
+  <div class="accordion-item">
+    <button class="acc-trigger">Where do I find component code? <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="acc-panel"><div class="acc-panel-inner"><p>Each component lives at <code>/library/components/[name].html</code> with a live demo and snippet you can copy.</p></div></div>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div data-accordion&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;button class="acc-trigger"&gt;Question
+      &lt;svg class="chev" .../&gt;
+    &lt;/button&gt;
+    &lt;div class="acc-panel"&gt;&lt;div class="acc-panel-inner"&gt;&lt;p&gt;Answer.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

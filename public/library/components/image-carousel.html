@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Image Carousel — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Module — Interactive</p><h1>Image Carousel</h1>
+<p>Slide-based carousel scoped to its root. Multiple instances per page work because <code>data-image-carousel</code> scopes all queries.</p>
+<div class="lib-meta"><span><strong>JS hooks:</strong> data-image-carousel · data-ic-track · data-ic-prev · data-ic-next</span></div>
+
+<div class="image-carousel" data-image-carousel style="margin-top:1.5rem;">
+  <div class="ic-viewport">
+    <div class="ic-track" data-ic-track>
+      <div class="ic-slide"><div class="ic-frame"><div class="placeholder-text"><p class="pt-title">Slide One</p><p class="pt-sub">Image placeholder</p></div></div><div class="carousel-caption"><p class="cc-title">Slide One</p><p class="cc-text">A short caption explaining this slide.</p></div></div>
+      <div class="ic-slide"><div class="ic-frame"><div class="placeholder-text"><p class="pt-title">Slide Two</p><p class="pt-sub">Image placeholder</p></div></div><div class="carousel-caption"><p class="cc-title">Slide Two</p><p class="cc-text">A short caption explaining this slide.</p></div></div>
+      <div class="ic-slide"><div class="ic-frame"><div class="placeholder-text"><p class="pt-title">Slide Three</p><p class="pt-sub">Image placeholder</p></div></div><div class="carousel-caption"><p class="cc-title">Slide Three</p><p class="cc-text">A short caption explaining this slide.</p></div></div>
+    </div>
+  </div>
+  <button class="ic-nav prev" data-ic-prev aria-label="Previous"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+  <button class="ic-nav next" data-ic-next aria-label="Next"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+</div>
+
+<code class="lib-code">&lt;div class="image-carousel" data-image-carousel&gt;
+  &lt;div class="ic-viewport"&gt;
+    &lt;div class="ic-track" data-ic-track&gt;
+      &lt;div class="ic-slide"&gt;
+        &lt;div class="ic-frame"&gt;&lt;img src="..." alt=""&gt;&lt;/div&gt;
+        &lt;div class="carousel-caption"&gt;&lt;p class="cc-title"&gt;Title&lt;/p&gt;&lt;p class="cc-text"&gt;Caption&lt;/p&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button class="ic-nav prev" data-ic-prev&gt;…&lt;/button&gt;
+  &lt;button class="ic-nav next" data-ic-next&gt;…&lt;/button&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

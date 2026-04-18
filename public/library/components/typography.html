@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Typography — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Foundation</p><h1>Typography</h1>
+<p>Two typefaces, both loaded from Google Fonts in <code>library.css</code>:</p>
+<div class="lib-meta">
+  <span><strong>Display:</strong> Cormorant Garamond — weights 400, 500, 600, 700 + italic</span>
+  <span><strong>Body:</strong> Inter — weights 300, 400, 500, 600</span>
+</div>
+
+<div class="lib-demo">
+  <div class="sg-type-row"><h1 style="margin:0;">Heading 1 — Cormorant Garamond</h1><p class="meta">h1 · clamp(2.5rem, 5vw, 4rem) · weight 500 · color: var(--text-display)</p></div>
+  <div class="sg-type-row"><h2 style="margin:0;">Heading 2 — Section Title</h2><p class="meta">h2 · clamp(2rem, 4vw, 3rem) · weight 500</p></div>
+  <div class="sg-type-row"><h3 style="margin:0;">Heading 3 — Subsection</h3><p class="meta">h3 · clamp(1rem, 3vw, 1.5rem) · weight 500</p></div>
+  <div class="sg-type-row"><h3 class="text-accent" style="margin:0;">Accent Heading — Terracotta</h3><p class="meta">.text-accent · weight 600 · color: var(--accent-warm)</p></div>
+  <div class="sg-type-row"><h4 style="margin:0;">Heading 4 — Inter Medium</h4><p class="meta">h4 · 1rem · Inter weight 500</p></div>
+  <div class="sg-type-row"><p style="margin:0;">Body paragraph — Inter at fluid <code>clamp(0.9rem, 1.4vw, 1.05rem)</code> with line-height 1.7. The quick brown fox jumps over the lazy dog.</p><p class="meta">p · color: var(--text-body)</p></div>
+  <div class="sg-type-row"><p class="label" style="margin:0;">Eyebrow Label</p><p class="meta">.label · uppercase · 0.15em letter-spacing · accent color · 0.75rem</p></div>
+  <div class="sg-type-row"><span class="font-serif italic" style="font-size:2rem; color:hsl(var(--accent-warm)); font-weight:300;">Display italic accent</span><p class="meta">.font-serif.italic + accent color · used in hero h1 phrase</p></div>
+  <div class="sg-type-row"><p style="margin:0; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:0.875rem;">Monospace — for code references</p><p class="meta">ui-monospace stack · 0.75–0.875rem</p></div>
+</div>
+
+<h2 style="margin-top:2rem;">Snippet</h2>
+<code class="lib-code">&lt;h1&gt;Creating thoughtful &lt;span class="font-serif italic" style="color:hsl(var(--accent-warm)); font-weight:300;"&gt;digital experiences&lt;/span&gt;&lt;/h1&gt;
+&lt;p class="label"&gt;Eyebrow Label&lt;/p&gt;
+&lt;h3 class="text-accent"&gt;Accent Subhead&lt;/h3&gt;
+&lt;p&gt;Body copy paragraph.&lt;/p&gt;</code>
+<script src="../library.js"></script></main></body></html>

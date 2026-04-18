@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Constellation Flourish — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Decoration — Animated</p><h1>Constellation Flourish</h1>
+<p>Animated dotted-network SVG injected into any element with class <code>.constellation</code> by <code>library.js</code>. Wrap inside a positioned parent (e.g. the headshot frame) so it overlays correctly.</p>
+
+<div class="lib-demo" style="display:flex;justify-content:center;padding:3rem;">
+  <div style="position:relative;width:14rem;height:14rem;">
+    <div class="headshot-bg-1" style="inset:-1rem;"></div>
+    <div class="headshot-bg-2" style="inset:-1rem;"></div>
+    <div class="constellation" aria-hidden="true" style="inset:-2.5rem;"></div>
+    <div class="headshot" style="width:14rem;height:14rem;"><img src="../assets/about_history.png" alt=""></div>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="headshot-wrap" style="position:relative;"&gt;
+  &lt;div class="headshot-bg-1"&gt;&lt;/div&gt;
+  &lt;div class="headshot-bg-2"&gt;&lt;/div&gt;
+  &lt;div class="constellation" aria-hidden="true"&gt;&lt;/div&gt;
+  &lt;div class="headshot"&gt;&lt;img src="..." alt=""&gt;&lt;/div&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

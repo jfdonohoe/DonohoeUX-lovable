@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About Carousel — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Module — Interactive</p><h1>About Carousel</h1>
+<p>Tabbed horizontal carousel. Click a numbered tab or use prev/next arrows. Card width and offset are responsive.</p>
+<div class="lib-meta"><span><strong>JS hooks:</strong> data-about-carousel · data-about-tab · data-about-track · data-about-prev · data-about-next</span></div>
+
+<section class="about-section" style="padding:2rem 0;border-radius:1.5rem;margin-top:1rem;" data-about-carousel>
+  <div class="container-page" style="padding:0 1.5rem;">
+    <div class="about-header">
+      <div><p class="label">About Me</p><h2 style="margin:0;">Designing with empathy,<br><span class="italic">building with purpose</span></h2></div>
+      <div style="display:flex;gap:0.75rem;">
+        <button class="arrow-btn" data-about-prev aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button class="arrow-btn" data-about-next aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+      </div>
+    </div>
+    <nav class="about-tabs" aria-label="About sections">
+      <button class="about-tab active" data-about-tab><span class="num">1</span>Journey</button>
+      <button class="about-tab" data-about-tab><span class="num">2</span>Leadership</button>
+      <button class="about-tab" data-about-tab><span class="num">3</span>Satisfaction</button>
+    </nav>
+    <div class="about-viewport">
+      <div class="about-track" data-about-track>
+        <article class="about-card"><img src="../assets/about_history.png" alt=""><h3>My Journey</h3><div class="body"><p>Card body copy describing this section.</p></div></article>
+        <article class="about-card"><img src="../assets/about_leadership.png" alt=""><h3>Leadership</h3><div class="body"><p>Card body copy describing this section.</p></div></article>
+        <article class="about-card"><img src="../assets/about_satisfaction.png" alt=""><h3>Satisfaction</h3><div class="body"><p>Card body copy describing this section.</p></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<code class="lib-code">&lt;section class="about-section" data-about-carousel&gt;
+  &lt;div class="container-page"&gt;
+    &lt;div class="about-header"&gt;
+      &lt;div&gt;&lt;p class="label"&gt;About Me&lt;/p&gt;&lt;h2&gt;Heading&lt;/h2&gt;&lt;/div&gt;
+      &lt;div&gt;
+        &lt;button class="arrow-btn" data-about-prev&gt;…&lt;/button&gt;
+        &lt;button class="arrow-btn" data-about-next&gt;…&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;nav class="about-tabs"&gt;
+      &lt;button class="about-tab active" data-about-tab&gt;&lt;span class="num"&gt;1&lt;/span&gt;Journey&lt;/button&gt;
+      &lt;button class="about-tab" data-about-tab&gt;&lt;span class="num"&gt;2&lt;/span&gt;Leadership&lt;/button&gt;
+    &lt;/nav&gt;
+    &lt;div class="about-viewport"&gt;
+      &lt;div class="about-track" data-about-track&gt;
+        &lt;article class="about-card"&gt;…&lt;/article&gt;
+        &lt;article class="about-card"&gt;…&lt;/article&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code>
+<script src="../library.js"></script></main></body></html>
