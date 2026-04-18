@@ -13,12 +13,27 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        serif: ["'Cormorant Garamond'", "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        "surface-elevated": "hsl(var(--surface-elevated))",
+        "surface-warm": "hsl(var(--surface-warm))",
+        "accent-warm": {
+          DEFAULT: "hsl(var(--accent-warm))",
+          light: "hsl(var(--accent-warm-light))",
+          dark: "hsl(var(--accent-warm-dark))",
+        },
+        "text-display": "hsl(var(--text-display))",
+        "text-body": "hsl(var(--text-body))",
+        "text-subtle": "hsl(var(--text-subtle))",
+        "border-light": "hsl(var(--border-light))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
