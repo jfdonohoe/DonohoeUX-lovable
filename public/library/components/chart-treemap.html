@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Treemap — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Data Visualization</p><h1>Treemap</h1>
+<p>Rectangles sized by value. Good for showing relative magnitude across many categories at once. Provide <code>[{label, value}]</code>.</p>
+
+<div class="lib-demo">
+  <div class="viz" data-viz-type="treemap"
+    data-viz='[
+      {"label":"Engineering","value":420},
+      {"label":"Sales","value":280},
+      {"label":"Marketing","value":190},
+      {"label":"Customer Success","value":140},
+      {"label":"Operations","value":110},
+      {"label":"Finance","value":80},
+      {"label":"People","value":60}
+    ]'>
+    <p class="viz-title">Headcount by department</p>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="viz" data-viz-type="treemap"
+  data-viz='[{"label":"Engineering","value":420}, ...]'&gt;&lt;/div&gt;</code>
+
+<script src="../library.js"></script></main></body></html>

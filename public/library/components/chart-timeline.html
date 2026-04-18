@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Timeline — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Data Visualization</p><h1>Timeline</h1>
+<p>Gantt-style horizontal bars. Each item has a <code>label</code>, numeric <code>start</code>/<code>end</code>, and an optional <code>group</code> index for color.</p>
+
+<div class="lib-demo">
+  <div class="viz" data-viz-type="timeline"
+    data-viz='[
+      {"label":"Discovery","start":0,"end":3,"group":0},
+      {"label":"Wireframes","start":2,"end":5,"group":1},
+      {"label":"Visual design","start":4,"end":8,"group":1},
+      {"label":"Prototype","start":6,"end":10,"group":2},
+      {"label":"User testing","start":9,"end":12,"group":2},
+      {"label":"Build","start":10,"end":18,"group":3},
+      {"label":"QA","start":16,"end":20,"group":0},
+      {"label":"Launch prep","start":18,"end":21,"group":0}
+    ]'>
+    <p class="viz-title">Project schedule (weeks)</p>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="viz" data-viz-type="timeline"
+  data-viz='[{"label":"Discovery","start":0,"end":3,"group":0}, ...]'&gt;&lt;/div&gt;</code>
+
+<script src="../library.js"></script></main></body></html>

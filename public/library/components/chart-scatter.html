@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scatter Plot — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Data Visualization</p><h1>Scatter Plot</h1>
+<p>Each point is <code>{x, y}</code> with optional <code>r</code> (radius for bubble effect) and <code>label</code>. Wrap multiple series in an outer array and provide a legend.</p>
+
+<div class="lib-demo">
+  <div class="viz" data-viz-type="scatter" data-viz-legend='["Cohort A","Cohort B"]'
+    data-viz='[
+      [{"x":3,"y":12,"r":6},{"x":7,"y":22,"r":5},{"x":11,"y":18,"r":7},{"x":15,"y":31,"r":9},{"x":19,"y":27,"r":6},{"x":23,"y":40,"r":11},{"x":27,"y":33,"r":8}],
+      [{"x":4,"y":8,"r":5},{"x":9,"y":14,"r":7},{"x":13,"y":11,"r":4},{"x":17,"y":24,"r":8},{"x":21,"y":19,"r":6},{"x":25,"y":29,"r":10}]
+    ]'>
+    <p class="viz-title">Spend vs. conversion (bubble = sample size)</p>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="viz" data-viz-type="scatter"
+  data-viz-legend='["Cohort A","Cohort B"]'
+  data-viz='[[{"x":3,"y":12,"r":6}, ...], [...]]'&gt;&lt;/div&gt;</code>
+
+<script src="../library.js"></script></main></body></html>

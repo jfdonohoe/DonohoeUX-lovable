@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nested Donut — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Data Visualization</p><h1>Nested Donut</h1>
+<p>Concentric rings show the same dimension at multiple grouping levels (outer ring = category, inner ring = sub-category). Provide an array of rings, each an array of <code>{label, value}</code>.</p>
+
+<div class="lib-demo">
+  <div class="viz" data-viz-type="nested-donut" data-viz-legend='["Outer ring (region)","Inner ring (channel)"]'
+    data-viz='[
+      [{"label":"Americas","value":520},{"label":"EMEA","value":380},{"label":"APAC","value":260}],
+      [{"label":"Direct","value":420},{"label":"Partner","value":380},{"label":"Online","value":360}]
+    ]'>
+    <p class="viz-title">Revenue by region & channel</p>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="viz" data-viz-type="nested-donut"
+  data-viz='[[{"label":"Americas","value":520}, ...], [{"label":"Direct","value":420}, ...]]'&gt;&lt;/div&gt;</code>
+
+<script src="../library.js"></script></main></body></html>

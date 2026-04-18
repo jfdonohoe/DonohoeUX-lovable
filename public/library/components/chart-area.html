@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Area Chart — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Data Visualization</p><h1>Area Chart</h1>
+<p>Filled area chart that emphasizes magnitude over time. Same payload shape as the line chart: an array of <code>{x, y}</code> points.</p>
+
+<div class="lib-demo">
+  <div class="viz" data-viz-type="area"
+    data-viz='[{"x":"Mon","y":42},{"x":"Tue","y":58},{"x":"Wed","y":71},{"x":"Thu","y":63},{"x":"Fri","y":89},{"x":"Sat","y":104},{"x":"Sun","y":76}]'>
+    <p class="viz-title">Weekly sessions (thousands)</p>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="viz" data-viz-type="area"
+  data-viz='[{"x":"Mon","y":42}, ...]'&gt;&lt;/div&gt;</code>
+
+<script src="../library.js"></script></main></body></html>

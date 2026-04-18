@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stacked Bar Chart — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Data Visualization</p><h1>Stacked Bar</h1>
+<p>Stacks each series on top of the previous one. Best for showing part-to-whole over time. Same payload as Grouped Bar.</p>
+
+<div class="lib-demo">
+  <div class="viz" data-viz-type="stacked-bar" data-viz-legend='["Direct","Referral","Organic","Paid"]'
+    data-viz='[
+      {"label":"Jan","values":[12,18,28,9]},
+      {"label":"Feb","values":[15,21,32,11]},
+      {"label":"Mar","values":[18,19,38,14]},
+      {"label":"Apr","values":[22,24,40,16]},
+      {"label":"May","values":[27,28,46,18]},
+      {"label":"Jun","values":[32,30,52,21]}
+    ]'>
+    <p class="viz-title">Acquisition channel by month</p>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="viz" data-viz-type="stacked-bar"
+  data-viz-legend='["Direct","Referral","Organic","Paid"]'
+  data-viz='[{"label":"Jan","values":[12,18,28,9]}, ...]'&gt;&lt;/div&gt;</code>
+
+<script src="../library.js"></script></main></body></html>
