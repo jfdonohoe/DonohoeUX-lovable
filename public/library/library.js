@@ -298,7 +298,7 @@
 
   /* ---- Axis helpers ---- */
   function drawAxes(svg, opts) {
-    const { x0, y0, x1, y1, xTicks, yTicks, yMax, yMin = 0, xLabels } = opts;
+    const { x0, y0, x1, y1, xTicks, yTicks, yMax, yMin = 0, xLabels, xLabelMode = "point" } = opts;
     const grid = el("g", { class: "viz-grid" });
     const axis = el("g", { class: "viz-axis" });
     // y grid + labels
@@ -310,11 +310,17 @@
       t.textContent = Math.round(v * 100) / 100;
       axis.appendChild(t);
     }
-    // x labels
+    // x labels — "point" places at edges (line/area), "band" centers in slots (bars)
     if (xLabels) {
-      const step = (x1 - x0) / Math.max(1, xLabels.length - 1);
       xLabels.forEach((lbl, i) => {
-        const x = x0 + step * i;
+        let x;
+        if (xLabelMode === "band") {
+          const slot = (x1 - x0) / xLabels.length;
+          x = x0 + slot * (i + 0.5);
+        } else {
+          const step = (x1 - x0) / Math.max(1, xLabels.length - 1);
+          x = x0 + step * i;
+        }
         const t = el("text", { x, y: y1 + 16, "text-anchor": "middle" });
         t.textContent = lbl;
         axis.appendChild(t);
@@ -401,7 +407,7 @@
     const seriesCount = data[0].values.length;
     const yMax = Math.max(...data.flatMap(g => g.values)) * 1.15;
     const svg = el("svg", { class: "viz-svg", viewBox: `0 0 ${W} ${H}`, role: "img" });
-    drawAxes(svg, { x0: pad.l, x1: W - pad.r, y0: pad.t, y1: H - pad.b, yTicks: 4, yMax, xLabels: data.map(d => d.label) });
+    drawAxes(svg, { x0: pad.l, x1: W - pad.r, y0: pad.t, y1: H - pad.b, yTicks: 4, yMax, xLabels: data.map(d => d.label), xLabelMode: "band" });
     const groupW = (W - pad.l - pad.r) / groups;
     const barW = (groupW * 0.7) / seriesCount;
     const tip = makeTooltip(host);
@@ -428,7 +434,7 @@
     const seriesCount = data[0].values.length;
     const yMax = Math.max(...data.map(g => g.values.reduce((a, b) => a + b, 0))) * 1.15;
     const svg = el("svg", { class: "viz-svg", viewBox: `0 0 ${W} ${H}`, role: "img" });
-    drawAxes(svg, { x0: pad.l, x1: W - pad.r, y0: pad.t, y1: H - pad.b, yTicks: 4, yMax, xLabels: data.map(d => d.label) });
+    drawAxes(svg, { x0: pad.l, x1: W - pad.r, y0: pad.t, y1: H - pad.b, yTicks: 4, yMax, xLabels: data.map(d => d.label), xLabelMode: "band" });
     const groupW = (W - pad.l - pad.r) / data.length;
     const barW = groupW * 0.6;
     const tip = makeTooltip(host);
