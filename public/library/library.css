@@ -805,3 +805,145 @@ hr { border: none; border-top: 1px solid hsl(var(--border-light)); margin: 3rem 
 .mb-6 { margin-bottom: 1.5rem; }
 .mb-8 { margin-bottom: 2rem; }
 .flex-center { display: flex; align-items: center; justify-content: center; }
+
+/* =============================================================================
+   LIBRARY ADDITIONS — components beyond the standalone site
+   ============================================================================= */
+
+/* ---------- Video player ---------- */
+.video-player {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: hsl(var(--text-display));
+  border: 1px solid hsl(var(--border-light));
+  aspect-ratio: 16 / 9;
+}
+.video-player video { width: 100%; height: 100%; display: block; object-fit: cover; }
+.video-player .vp-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(to top, hsl(0 0% 0% / 0.45), hsl(0 0% 0% / 0));
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.video-player.is-playing .vp-overlay { opacity: 0; }
+.video-player .vp-play {
+  pointer-events: auto;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 4.5rem; height: 4.5rem;
+  border-radius: 9999px;
+  background-color: hsl(var(--accent-warm));
+  color: white; border: none; cursor: pointer;
+  box-shadow: 0 12px 32px -8px hsl(var(--accent-warm) / 0.6);
+  transition: transform 0.2s, background-color 0.2s;
+}
+.video-player .vp-play:hover { transform: scale(1.06); background-color: hsl(var(--accent-warm-dark)); }
+.video-player .vp-controls {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(to top, hsl(0 0% 0% / 0.6), hsl(0 0% 0% / 0));
+  color: white;
+  opacity: 0; transition: opacity 0.2s;
+}
+.video-player:hover .vp-controls, .video-player.is-playing .vp-controls { opacity: 1; }
+.video-player .vp-btn {
+  background: transparent; border: none; color: white;
+  cursor: pointer; padding: 0.25rem; display: inline-flex;
+}
+.video-player .vp-progress {
+  flex: 1; height: 4px; border-radius: 9999px;
+  background-color: hsl(0 0% 100% / 0.25); overflow: hidden;
+}
+.video-player .vp-progress-fill {
+  display: block; height: 100%; width: 0%;
+  background-color: hsl(var(--accent-warm));
+  transition: width 0.1s linear;
+}
+.video-player .vp-time { font-size: 0.75rem; font-variant-numeric: tabular-nums; opacity: 0.9; }
+
+/* ---------- SVG decorative overlay (arc + arrow) ---------- */
+.svg-overlay { position: relative; display: inline-block; }
+.svg-overlay .so-mark {
+  position: absolute;
+  pointer-events: none;
+  color: hsl(var(--accent-warm));
+}
+
+/* ---------- Reveal-on-scroll ---------- */
+.reveal-init { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+.reveal-in { opacity: 1; transform: translateY(0); }
+
+/* ---------- Tabs (interactive) ---------- */
+.tabs { border-bottom: 1px solid hsl(var(--border-light)); display: flex; gap: 0.25rem; }
+.tabs .tab-btn {
+  padding: 0.75rem 1rem;
+  background: transparent; border: none; cursor: pointer;
+  font-family: inherit; font-size: 0.875rem; font-weight: 500;
+  color: hsl(var(--text-subtle));
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.tabs .tab-btn:hover { color: hsl(var(--text-display)); }
+.tabs .tab-btn.active { color: hsl(var(--accent-warm)); border-bottom-color: hsl(var(--accent-warm)); }
+.tab-panel { padding: 1.5rem 0; display: none; }
+.tab-panel.active { display: block; }
+
+/* ---------- Accordion ---------- */
+.accordion-item { border-bottom: 1px solid hsl(var(--border-light)); }
+.accordion-item .acc-trigger {
+  width: 100%; text-align: left;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 0;
+  background: transparent; border: none; cursor: pointer;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.25rem; color: hsl(var(--text-display));
+}
+.accordion-item .acc-trigger .chev { transition: transform 0.25s; color: hsl(var(--accent-warm)); }
+.accordion-item.is-open .acc-trigger .chev { transform: rotate(180deg); }
+.accordion-item .acc-panel { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.accordion-item.is-open .acc-panel { max-height: 500px; }
+.accordion-item .acc-panel-inner { padding: 0 0 1.25rem; color: hsl(var(--text-body)); }
+
+/* ---------- Library shell ---------- */
+.lib-shell { padding: 2rem 0 6rem; }
+.lib-header { padding: 6rem 0 2rem; border-bottom: 1px solid hsl(var(--border-light)); margin-bottom: 2rem; }
+.lib-header h1 { margin-bottom: 0.5rem; }
+.lib-toc {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.lib-toc a {
+  display: block;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid hsl(var(--border-light));
+  background-color: hsl(var(--surface-elevated));
+  color: hsl(var(--text-display));
+  transition: all 0.2s;
+}
+.lib-toc a:hover { border-color: hsl(var(--accent-warm)); box-shadow: var(--shadow-warm); color: hsl(var(--accent-warm-dark)); }
+.lib-toc .toc-name { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+.lib-toc .toc-desc { display: block; font-size: 0.8125rem; color: hsl(var(--text-subtle)); }
+.lib-toc .toc-cat {
+  display: inline-block; font-size: 0.625rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: hsl(var(--accent-warm)); margin-bottom: 0.5rem;
+}
+.lib-pagewrap { padding: 2rem 0 4rem; }
+.lib-pagewrap h1 { margin-bottom: 0.25rem; }
+.lib-pagewrap .lib-back { font-size: 0.875rem; color: hsl(var(--text-subtle)); display: inline-flex; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; }
+.lib-demo { padding: 2rem; border: 1px solid hsl(var(--border-light)); border-radius: 1rem; background: hsl(var(--surface-elevated)); margin: 1.5rem 0; }
+.lib-code {
+  display: block; white-space: pre; overflow-x: auto;
+  background-color: hsl(var(--text-display));
+  color: hsl(40 33% 92%);
+  padding: 1.25rem; border-radius: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8125rem; line-height: 1.6;
+}
+.lib-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.8125rem; color: hsl(var(--text-subtle)); margin: 0.5rem 0 1.5rem; }
+.lib-meta strong { color: hsl(var(--text-display)); font-weight: 600; }
