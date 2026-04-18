@@ -101,10 +101,9 @@
     color: hsl(var(--accent-warm));
   }
 
-  .text-display { color: hsl(var(--text-display)); }
-  .text-body-c { color: hsl(var(--text-body)); }
-  .text-subtle-c { color: hsl(var(--text-subtle)); }
-  .text-accent { color: hsl(var(--accent-warm)); font-weight: 600; }
+  /* NOTE: site-specific text color tokens live in @layer utilities below
+     so they override Tailwind's generated utilities (e.g. text-accent
+     from the shadcn `accent` color). */
 
   /* Buttons */
   .btn {
