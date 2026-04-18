@@ -1,60 +1,80 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Data Table — Library</title><link rel="stylesheet" href="../library.css"></head>
+<title>List View — Library</title><link rel="stylesheet" href="../library.css"></head>
 <body><main class="container-page lib-pagewrap">
 <a href="../index.html" class="lib-back">← Library index</a>
-<p class="label">Application UI</p><h1>Data Table</h1>
-<p>List view for structured data. Hover-highlighted rows, uppercase header, status pills, and avatar cells.</p>
+<p class="label">Application UI</p><h1>List View</h1>
+<p>A <code>div</code>/grid-based "table" for dashboards, CRMs, file lists, and any record list that needs to grow into complex row UI or reflow on mobile (rows stack into labeled cards under 640px). Use <code>&lt;table&gt;</code> only for true tabular data (financial reports, comparison tables).</p>
+<p>See also: <a href="list-view-sortable.html">Sortable variant</a> · <a href="list-view-editable.html">Inline-editable variant</a></p>
 
 <div class="lib-demo">
-  <div class="data-table-wrap">
-    <table class="data-table">
-      <thead>
-        <tr><th>Project</th><th>Owner</th><th>Status</th><th>Updated</th><th style="text-align:right;">Spend</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="td-strong">Atlas Redesign</td>
-          <td><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">JD</span> Jane D.</div></td>
-          <td><span class="status-pill status-success">Active</span></td>
-          <td>2h ago</td>
-          <td style="text-align:right;">$48,200</td>
-        </tr>
-        <tr>
-          <td class="td-strong">Field Research Q3</td>
-          <td><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">RM</span> Rae M.</div></td>
-          <td><span class="status-pill status-info">Planning</span></td>
-          <td>Yesterday</td>
-          <td style="text-align:right;">$12,500</td>
-        </tr>
-        <tr>
-          <td class="td-strong">Pattern Library v2</td>
-          <td><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">SK</span> Sam K.</div></td>
-          <td><span class="status-pill status-warn">At risk</span></td>
-          <td>3d ago</td>
-          <td style="text-align:right;">$31,000</td>
-        </tr>
-        <tr>
-          <td class="td-strong">Onboarding Flow</td>
-          <td><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">TO</span> Tomi O.</div></td>
-          <td><span class="status-pill status-neutral">Archived</span></td>
-          <td>Last week</td>
-          <td style="text-align:right;">$9,800</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="list-view" role="list">
+    <div class="list-row list-head" style="grid-template-columns: 2fr 1.4fr 1fr 1fr 1fr 2.5rem;">
+      <div class="list-cell">Project</div>
+      <div class="list-cell">Owner</div>
+      <div class="list-cell">Status</div>
+      <div class="list-cell">Updated</div>
+      <div class="list-cell cell-right">Spend</div>
+      <div></div>
+    </div>
+    <div class="list-body" role="list">
+      <div class="list-row" style="grid-template-columns: 2fr 1.4fr 1fr 1fr 1fr 2.5rem;" role="listitem">
+        <div class="list-cell cell-strong" data-label="Project">Atlas Redesign</div>
+        <div class="list-cell" data-label="Owner"><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">JD</span> Jane D.</div></div>
+        <div class="list-cell" data-label="Status"><span class="status-pill status-success">Active</span></div>
+        <div class="list-cell" data-label="Updated">2h ago</div>
+        <div class="list-cell cell-right" data-label="Spend">$48,200</div>
+        <div class="row-actions">
+          <button class="row-action-btn" aria-label="More"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg></button>
+        </div>
+      </div>
+      <div class="list-row" style="grid-template-columns: 2fr 1.4fr 1fr 1fr 1fr 2.5rem;" role="listitem">
+        <div class="list-cell cell-strong" data-label="Project">Field Research Q3</div>
+        <div class="list-cell" data-label="Owner"><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">RM</span> Rae M.</div></div>
+        <div class="list-cell" data-label="Status"><span class="status-pill status-info">Planning</span></div>
+        <div class="list-cell" data-label="Updated">Yesterday</div>
+        <div class="list-cell cell-right" data-label="Spend">$12,500</div>
+        <div class="row-actions"><button class="row-action-btn" aria-label="More"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg></button></div>
+      </div>
+      <div class="list-row" style="grid-template-columns: 2fr 1.4fr 1fr 1fr 1fr 2.5rem;" role="listitem">
+        <div class="list-cell cell-strong" data-label="Project">Pattern Library v2</div>
+        <div class="list-cell" data-label="Owner"><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">SK</span> Sam K.</div></div>
+        <div class="list-cell" data-label="Status"><span class="status-pill status-warn">At risk</span></div>
+        <div class="list-cell" data-label="Updated">3d ago</div>
+        <div class="list-cell cell-right" data-label="Spend">$31,000</div>
+        <div class="row-actions"><button class="row-action-btn" aria-label="More"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg></button></div>
+      </div>
+      <div class="list-row" style="grid-template-columns: 2fr 1.4fr 1fr 1fr 1fr 2.5rem;" role="listitem">
+        <div class="list-cell cell-strong" data-label="Project">Onboarding Flow</div>
+        <div class="list-cell" data-label="Owner"><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">TO</span> Tomi O.</div></div>
+        <div class="list-cell" data-label="Status"><span class="status-pill status-neutral">Archived</span></div>
+        <div class="list-cell" data-label="Updated">Last week</div>
+        <div class="list-cell cell-right" data-label="Spend">$9,800</div>
+        <div class="row-actions"><button class="row-action-btn" aria-label="More"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg></button></div>
+      </div>
+    </div>
   </div>
 </div>
 
-<code class="lib-code">&lt;div class="data-table-wrap"&gt;
-  &lt;table class="data-table"&gt;
-    &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Col&lt;/th&gt;...&lt;/tr&gt;&lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td class="td-strong"&gt;Name&lt;/td&gt;
-        &lt;td&gt;&lt;span class="status-pill status-success"&gt;Active&lt;/span&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
+<code class="lib-code">&lt;div class="list-view"&gt;
+  &lt;div class="list-row list-head" style="grid-template-columns: 2fr 1fr 1fr 2.5rem;"&gt;
+    &lt;div class="list-cell"&gt;Name&lt;/div&gt;
+    &lt;div class="list-cell"&gt;Status&lt;/div&gt;
+    &lt;div class="list-cell cell-right"&gt;Amount&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="list-body"&gt;
+    &lt;div class="list-row" style="grid-template-columns: 2fr 1fr 1fr 2.5rem;"&gt;
+      &lt;div class="list-cell cell-strong" data-label="Name"&gt;Item&lt;/div&gt;
+      &lt;div class="list-cell" data-label="Status"&gt;
+        &lt;span class="status-pill status-success"&gt;Active&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="list-cell cell-right" data-label="Amount"&gt;$120&lt;/div&gt;
+      &lt;div class="row-actions"&gt;
+        &lt;button class="row-action-btn"&gt;⋯&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code>
+<p style="font-size:0.85rem; color:hsl(var(--text-subtle)); margin-top:1rem;">Notes: set the same <code>grid-template-columns</code> on header and body rows. <code>data-label</code> attributes on cells are surfaced on mobile (under 640px) where rows reflow into labeled cards.</p>
 <script src="../library.js"></script></main></body></html>

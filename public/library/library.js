@@ -177,6 +177,62 @@
     });
   }
 
+  /* Sortable list view */
+  function initSortableList() {
+    $$("[data-sortable-list]").forEach(root => {
+      const body = $("[data-list-body]", root);
+      if (!body) return;
+      const sortBtns = $$(".list-sort", root);
+      sortBtns.forEach(btn => btn.addEventListener("click", () => {
+        const key = btn.getAttribute("data-key");
+        const type = btn.getAttribute("data-type") || "string";
+        const cur = btn.getAttribute("data-sort");
+        const next = cur === "asc" ? "desc" : "asc";
+        sortBtns.forEach(b => b.removeAttribute("data-sort"));
+        btn.setAttribute("data-sort", next);
+        const rows = $$(".list-row", body);
+        rows.sort((a, b) => {
+          let av = a.querySelector(`[data-cell="${key}"]`)?.getAttribute("data-value") ?? a.querySelector(`[data-cell="${key}"]`)?.textContent ?? "";
+          let bv = b.querySelector(`[data-cell="${key}"]`)?.getAttribute("data-value") ?? b.querySelector(`[data-cell="${key}"]`)?.textContent ?? "";
+          if (type === "number") { av = parseFloat(av) || 0; bv = parseFloat(bv) || 0; return next === "asc" ? av - bv : bv - av; }
+          return next === "asc" ? String(av).localeCompare(String(bv)) : String(bv).localeCompare(String(av));
+        });
+        rows.forEach(r => body.appendChild(r));
+      }));
+    });
+  }
+
+  /* Inline editable cells */
+  function initInlineEdit() {
+    $$(".cell-edit").forEach(cell => {
+      cell.setAttribute("contenteditable", "true");
+      cell.setAttribute("spellcheck", "false");
+      let original = cell.textContent;
+      cell.addEventListener("focus", () => { original = cell.textContent; });
+      cell.addEventListener("keydown", e => {
+        if (e.key === "Enter") { e.preventDefault(); cell.blur(); }
+        if (e.key === "Escape") { cell.textContent = original; cell.blur(); }
+      });
+      cell.addEventListener("blur", () => {
+        if (cell.textContent !== original) {
+          cell.classList.add("is-saving");
+          setTimeout(() => cell.classList.remove("is-saving"), 800);
+          if (window.libToast) window.libToast("Saved", "success");
+        }
+      });
+    });
+    /* Inline status select — keep pill color in sync with selected option */
+    $$(".cell-select").forEach(sel => {
+      const sync = () => {
+        const opt = sel.options[sel.selectedIndex];
+        const variant = opt.getAttribute("data-variant") || "neutral";
+        sel.className = "cell-select status-pill status-" + variant;
+      };
+      sync();
+      sel.addEventListener("change", () => { sync(); if (window.libToast) window.libToast("Status updated", "success"); });
+    });
+  }
+
   /* Reveal on scroll */
   function initReveal() {
     const els = $$(".reveal-init");
@@ -191,6 +247,7 @@
     initYear(); initConstellation(); initAboutCarousel(); initImageCarousels();
     initVideoPlayers(); initTabs(); initAccordion();
     initModals(); initDropdowns(); initToasts(); initPagination();
+    initSortableList(); initInlineEdit();
     initReveal();
   });
 })();

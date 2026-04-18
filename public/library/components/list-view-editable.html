@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>List View — Inline Edit — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>List View — Inline Editing</h1>
+<p>Click any cell with the <code>.cell-edit</code> class to edit in place. <kbd>Enter</kbd> commits, <kbd>Esc</kbd> reverts. Status uses a <code>.cell-select</code> that takes on the selected option's pill color. A toast confirms each save.</p>
+
+<div class="lib-demo">
+  <div class="list-view">
+    <div class="list-row list-head" style="grid-template-columns: 2fr 1.4fr 1fr 1fr;">
+      <div class="list-cell">Project</div>
+      <div class="list-cell">Owner</div>
+      <div class="list-cell">Status</div>
+      <div class="list-cell cell-right">Spend</div>
+    </div>
+    <div class="list-body">
+      <div class="list-row" style="grid-template-columns: 2fr 1.4fr 1fr 1fr;">
+        <div class="list-cell" data-label="Project"><span class="cell-edit cell-strong">Atlas Redesign</span></div>
+        <div class="list-cell" data-label="Owner"><span class="cell-edit">Jane Donohoe</span></div>
+        <div class="list-cell" data-label="Status">
+          <select class="cell-select">
+            <option data-variant="success" selected>Active</option>
+            <option data-variant="info">Planning</option>
+            <option data-variant="warn">At risk</option>
+            <option data-variant="neutral">Archived</option>
+          </select>
+        </div>
+        <div class="list-cell cell-right" data-label="Spend"><span class="cell-edit">$48,200</span></div>
+      </div>
+      <div class="list-row" style="grid-template-columns: 2fr 1.4fr 1fr 1fr;">
+        <div class="list-cell" data-label="Project"><span class="cell-edit cell-strong">Field Research Q3</span></div>
+        <div class="list-cell" data-label="Owner"><span class="cell-edit">Rae Mathers</span></div>
+        <div class="list-cell" data-label="Status">
+          <select class="cell-select">
+            <option data-variant="success">Active</option>
+            <option data-variant="info" selected>Planning</option>
+            <option data-variant="warn">At risk</option>
+            <option data-variant="neutral">Archived</option>
+          </select>
+        </div>
+        <div class="list-cell cell-right" data-label="Spend"><span class="cell-edit">$12,500</span></div>
+      </div>
+      <div class="list-row" style="grid-template-columns: 2fr 1.4fr 1fr 1fr;">
+        <div class="list-cell" data-label="Project"><span class="cell-edit cell-strong">Pattern Library v2</span></div>
+        <div class="list-cell" data-label="Owner"><span class="cell-edit">Sam Knight</span></div>
+        <div class="list-cell" data-label="Status">
+          <select class="cell-select">
+            <option data-variant="success">Active</option>
+            <option data-variant="info">Planning</option>
+            <option data-variant="warn" selected>At risk</option>
+            <option data-variant="neutral">Archived</option>
+          </select>
+        </div>
+        <div class="list-cell cell-right" data-label="Spend"><span class="cell-edit">$31,000</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<code class="lib-code">&lt;!-- Editable text cell --&gt;
+&lt;div class="list-cell" data-label="Owner"&gt;
+  &lt;span class="cell-edit"&gt;Jane Donohoe&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Editable status cell (pill recolors per option) --&gt;
+&lt;div class="list-cell" data-label="Status"&gt;
+  &lt;select class="cell-select"&gt;
+    &lt;option data-variant="success" selected&gt;Active&lt;/option&gt;
+    &lt;option data-variant="info"&gt;Planning&lt;/option&gt;
+    &lt;option data-variant="warn"&gt;At risk&lt;/option&gt;
+    &lt;option data-variant="neutral"&gt;Archived&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code>
+<p style="font-size:0.85rem; color:hsl(var(--text-subtle)); margin-top:1rem;">JS auto-attaches: <code>.cell-edit</code> becomes contenteditable; <code>.cell-select</code> syncs its pill class from the selected <code>data-variant</code>. Saves trigger <code>window.libToast()</code>.</p>
+<script src="../library.js"></script></main></body></html>
