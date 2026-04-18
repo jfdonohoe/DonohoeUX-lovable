@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pagination — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>Pagination</h1>
+<p>Page selector for tables and lists. Click pages to set active (demo).</p>
+
+<div class="lib-demo">
+  <nav class="pagination" data-pagination aria-label="Pagination">
+    <button aria-label="Previous">‹</button>
+    <button data-page="1" class="is-current">1</button>
+    <button data-page="2">2</button>
+    <button data-page="3">3</button>
+    <button data-page="4">4</button>
+    <span style="padding:0 0.25rem; color:hsl(var(--text-subtle));">…</span>
+    <button data-page="12">12</button>
+    <button aria-label="Next">›</button>
+  </nav>
+</div>
+
+<code class="lib-code">&lt;nav class="pagination" data-pagination&gt;
+  &lt;button&gt;‹&lt;/button&gt;
+  &lt;button data-page="1" class="is-current"&gt;1&lt;/button&gt;
+  &lt;button data-page="2"&gt;2&lt;/button&gt;
+  &lt;button&gt;›&lt;/button&gt;
+&lt;/nav&gt;</code>
+<script src="../library.js"></script></main></body></html>

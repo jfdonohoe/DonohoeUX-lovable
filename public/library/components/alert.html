@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alert — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>Alert / Banner</h1>
+<p>Inline status messages. Three variants: info, success, warn. Tinted using fill tokens.</p>
+
+<div class="lib-demo" style="display:flex; flex-direction:column; gap:0.75rem;">
+  <div class="alert alert-info">
+    <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    <div class="alert-body"><p class="alert-title">Heads up</p><p class="alert-msg">Scheduled maintenance is planned for this Sunday at 2am UTC.</p></div>
+  </div>
+  <div class="alert alert-success">
+    <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    <div class="alert-body"><p class="alert-title">Saved</p><p class="alert-msg">Your changes have been published successfully.</p></div>
+  </div>
+  <div class="alert alert-warn">
+    <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+    <div class="alert-body"><p class="alert-title">Storage almost full</p><p class="alert-msg">You're using 92% of your plan. Upgrade to keep uploading.</p></div>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="alert alert-info"&gt; &lt;!-- alert-success | alert-warn --&gt;
+  &lt;svg class="alert-icon" .../&gt;
+  &lt;div class="alert-body"&gt;
+    &lt;p class="alert-title"&gt;Title&lt;/p&gt;
+    &lt;p class="alert-msg"&gt;Message&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

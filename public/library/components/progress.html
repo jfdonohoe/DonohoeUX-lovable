@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Progress — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>Progress Bar</h1>
+<p>Determinate progress for uploads, completion meters, and storage.</p>
+
+<div class="lib-demo" style="display:flex; flex-direction:column; gap:1.25rem; max-width:24rem;">
+  <div>
+    <div class="progress-label"><span>Uploading photos</span><span>65%</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:65%;"></div></div>
+  </div>
+  <div>
+    <div class="progress-label"><span>Storage used</span><span>92%</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:92%; background-color:hsl(var(--accent-warm-dark));"></div></div>
+  </div>
+  <div>
+    <div class="progress-label"><span>Onboarding</span><span>40%</span></div>
+    <div class="progress-bar"><div class="progress-fill" style="width:40%; background-color:hsl(var(--fill-green));"></div></div>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="progress-label"&gt;&lt;span&gt;Label&lt;/span&gt;&lt;span&gt;65%&lt;/span&gt;&lt;/div&gt;
+&lt;div class="progress-bar"&gt;
+  &lt;div class="progress-fill" style="width:65%"&gt;&lt;/div&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

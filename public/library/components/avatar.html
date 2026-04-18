@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avatar — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>Avatar</h1>
+<p>Round user marker with image fallback to initials. Three sizes. Use <code>.avatar-group</code> for stacked overlap.</p>
+
+<div class="lib-demo" style="display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap;">
+  <span class="avatar avatar-sm">SM</span>
+  <span class="avatar">JD</span>
+  <span class="avatar avatar-lg">RM</span>
+  <span class="avatar avatar-lg" style="background:hsl(var(--fill-blue-light)); color:hsl(var(--fill-blue-dark));">SK</span>
+  <div class="avatar-group">
+    <span class="avatar">JD</span>
+    <span class="avatar" style="background:hsl(var(--fill-blue-light)); color:hsl(var(--fill-blue-dark));">SK</span>
+    <span class="avatar" style="background:hsl(var(--fill-green-light)); color:hsl(var(--fill-green-dark));">RM</span>
+    <span class="avatar" style="background:hsl(var(--fill-purp-light)); color:hsl(var(--fill-purp-dark));">+4</span>
+  </div>
+</div>
+
+<code class="lib-code">&lt;span class="avatar"&gt;JD&lt;/span&gt;
+&lt;span class="avatar avatar-lg"&gt;&lt;img src="..." alt=""&gt;&lt;/span&gt;
+
+&lt;div class="avatar-group"&gt;
+  &lt;span class="avatar"&gt;JD&lt;/span&gt;
+  &lt;span class="avatar"&gt;SK&lt;/span&gt;
+  &lt;span class="avatar"&gt;+4&lt;/span&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

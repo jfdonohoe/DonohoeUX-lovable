@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data Table — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Application UI</p><h1>Data Table</h1>
+<p>List view for structured data. Hover-highlighted rows, uppercase header, status pills, and avatar cells.</p>
+
+<div class="lib-demo">
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr><th>Project</th><th>Owner</th><th>Status</th><th>Updated</th><th style="text-align:right;">Spend</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-strong">Atlas Redesign</td>
+          <td><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">JD</span> Jane D.</div></td>
+          <td><span class="status-pill status-success">Active</span></td>
+          <td>2h ago</td>
+          <td style="text-align:right;">$48,200</td>
+        </tr>
+        <tr>
+          <td class="td-strong">Field Research Q3</td>
+          <td><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">RM</span> Rae M.</div></td>
+          <td><span class="status-pill status-info">Planning</span></td>
+          <td>Yesterday</td>
+          <td style="text-align:right;">$12,500</td>
+        </tr>
+        <tr>
+          <td class="td-strong">Pattern Library v2</td>
+          <td><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">SK</span> Sam K.</div></td>
+          <td><span class="status-pill status-warn">At risk</span></td>
+          <td>3d ago</td>
+          <td style="text-align:right;">$31,000</td>
+        </tr>
+        <tr>
+          <td class="td-strong">Onboarding Flow</td>
+          <td><div style="display:flex; align-items:center; gap:0.5rem;"><span class="avatar avatar-sm">TO</span> Tomi O.</div></td>
+          <td><span class="status-pill status-neutral">Archived</span></td>
+          <td>Last week</td>
+          <td style="text-align:right;">$9,800</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="data-table-wrap"&gt;
+  &lt;table class="data-table"&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Col&lt;/th&gt;...&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class="td-strong"&gt;Name&lt;/td&gt;
+        &lt;td&gt;&lt;span class="status-pill status-success"&gt;Active&lt;/span&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>
