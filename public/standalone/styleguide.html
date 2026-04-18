@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Styleguide — Donohoe UX Design System</title>
+  <meta name="description" content="Design tokens, typography, color palette, and components used across the Donohoe UX standalone site.">
+  <link rel="canonical" href="./styleguide.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-nav">
+    <nav class="container-page nav-row">
+      <a href="index.html" class="nav-logo" aria-label="Home"><img src="assets/headshot.png" alt="John Donohoe"></a>
+      <ul>
+        <li><a href="index.html" data-route="index.html">About</a></li>
+        <li><a href="case-study.html" data-route="case-study.html">Case Studies</a></li>
+        <li><a href="#" data-route="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="sg-hero">
+      <div class="container-page">
+        <p class="label">Design System</p>
+        <h1>Styleguide</h1>
+        <p class="lede" style="max-width:48rem;">A reference of every token, typographic style, and component used across the standalone Donohoe UX site.</p>
+      </div>
+    </section>
+
+    <div class="container-page">
+
+      <!-- COLORS -->
+      <section class="sg-section">
+        <h2>Color Tokens</h2>
+        <p class="sg-desc">All colors stored as raw HSL channels in CSS custom properties so they compose cleanly with opacity (e.g. <code>hsl(var(--accent-warm) / 0.5)</code>).</p>
+
+        <h3 style="margin-top:2rem;">Brand & Surfaces</h3>
+        <div class="sg-grid">
+          <div class="sg-swatch"><div class="swatch-color bg-accent-warm-light"></div><div class="swatch-meta"><p class="swatch-name">Accent Warm Light</p><p class="swatch-token">--accent-warm-light · 12 60% 94%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color bg-accent-warm"></div><div class="swatch-meta"><p class="swatch-name">Accent Warm (Primary)</p><p class="swatch-token">--accent-warm · 12 76% 61%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color bg-accent-warm-dark"></div><div class="swatch-meta"><p class="swatch-name">Accent Warm Dark</p><p class="swatch-token">--accent-warm-dark · 12 70% 45%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color bg-surface-warm"></div><div class="swatch-meta"><p class="swatch-name">Surface Warm</p><p class="swatch-token">--surface-warm · 30 40% 96%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color bg-surface-elevated" style="border-bottom:1px solid hsl(var(--border-light));"></div><div class="swatch-meta"><p class="swatch-name">Surface Elevated</p><p class="swatch-token">--surface-elevated · 0 0% 100%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--background));"></div><div class="swatch-meta"><p class="swatch-name">Background</p><p class="swatch-token">--background · 40 33% 98%</p></div></div>
+        </div>
+
+        <h3 style="margin-top:2rem;">Container Fills — Blue</h3>
+        <div class="sg-grid">
+          <div class="sg-swatch"><div class="swatch-color bg-fill-blue-light"></div><div class="swatch-meta"><p class="swatch-name">Fill Blue Light</p><p class="swatch-token">--fill-blue-light · 210 60% 94%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color bg-fill-blue"></div><div class="swatch-meta"><p class="swatch-name">Fill Blue</p><p class="swatch-token">--fill-blue · 197 76% 61%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color bg-fill-blue-dark"></div><div class="swatch-meta"><p class="swatch-name">Fill Blue Dark</p><p class="swatch-token">--fill-blue-dark · 201 70% 45%</p></div></div>
+        </div>
+
+        <h3 style="margin-top:2rem;">Container Fills — Purple</h3>
+        <div class="sg-grid">
+          <div class="sg-swatch"><div class="swatch-color bg-fill-purp-light"></div><div class="swatch-meta"><p class="swatch-name">Fill Purp Light</p><p class="swatch-token">--fill-purp-light · 253 60% 94%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color bg-fill-purp"></div><div class="swatch-meta"><p class="swatch-name">Fill Purp</p><p class="swatch-token">--fill-purp · 262 76% 61%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color bg-fill-purp-dark"></div><div class="swatch-meta"><p class="swatch-name">Fill Purp Dark</p><p class="swatch-token">--fill-purp-dark · 262 70% 45%</p></div></div>
+        </div>
+
+        <h3 style="margin-top:2rem;">Container Fills — Green</h3>
+        <div class="sg-grid">
+          <div class="sg-swatch"><div class="swatch-color bg-fill-green-light"></div><div class="swatch-meta"><p class="swatch-name">Fill Green Light</p><p class="swatch-token">--fill-green-light · 134 56% 89%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color bg-fill-green"></div><div class="swatch-meta"><p class="swatch-name">Fill Green</p><p class="swatch-token">--fill-green · 134 71% 60%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color bg-fill-green-dark"></div><div class="swatch-meta"><p class="swatch-name">Fill Green Dark</p><p class="swatch-token">--fill-green-dark · 138 72% 43%</p></div></div>
+        </div>
+
+        <h3 style="margin-top:2rem;">Text & Borders</h3>
+        <div class="sg-grid">
+          <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--text-display));"></div><div class="swatch-meta"><p class="swatch-name">Text Display</p><p class="swatch-token">--text-display · 220 25% 12%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--text-body));"></div><div class="swatch-meta"><p class="swatch-name">Text Body</p><p class="swatch-token">--text-body · 220 15% 30%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--text-subtle));"></div><div class="swatch-meta"><p class="swatch-name">Text Subtle</p><p class="swatch-token">--text-subtle · 220 10% 55%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--border));"></div><div class="swatch-meta"><p class="swatch-name">Border</p><p class="swatch-token">--border · 40 20% 88%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--border-light));"></div><div class="swatch-meta"><p class="swatch-name">Border Light</p><p class="swatch-token">--border-light · 40 20% 92%</p></div></div>
+          <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--muted));"></div><div class="swatch-meta"><p class="swatch-name">Muted</p><p class="swatch-token">--muted · 40 15% 90%</p></div></div>
+        </div>
+      </section>
+
+      <!-- TYPOGRAPHY -->
+      <section class="sg-section">
+        <h2>Typography</h2>
+        <p class="sg-desc">Cormorant Garamond for display headings, Inter for body. Heading sizes use <code>clamp()</code> for fluid scaling.</p>
+
+        <div class="sg-card">
+          <div class="sg-type-row">
+            <h1 style="margin:0;">Heading 1 — Cormorant Garamond</h1>
+            <p class="meta">h1 · clamp(2.5rem, 5vw, 4rem) · weight 500</p>
+          </div>
+          <div class="sg-type-row">
+            <h2 style="margin:0;">Heading 2 — Section Title</h2>
+            <p class="meta">h2 · clamp(2rem, 4vw, 3rem) · weight 500</p>
+          </div>
+          <div class="sg-type-row">
+            <h3 style="margin:0;">Heading 3 — Subsection</h3>
+            <p class="meta">h3 · clamp(1rem, 3vw, 1.5rem) · weight 500</p>
+          </div>
+          <div class="sg-type-row">
+            <h3 class="text-accent" style="margin:0;">Accent Heading — Terracotta</h3>
+            <p class="meta">.text-accent · weight 600 · color: hsl(var(--accent-warm))</p>
+          </div>
+          <div class="sg-type-row">
+            <p style="margin:0;">Body paragraph — Inter at fluid <code>clamp(0.9rem, 1.4vw, 1.05rem)</code> with line-height 1.7. The quick brown fox jumps over the lazy dog.</p>
+            <p class="meta">p · color: hsl(var(--text-body))</p>
+          </div>
+          <div class="sg-type-row">
+            <p class="label" style="margin:0;">Eyebrow Label</p>
+            <p class="meta">.label · uppercase · 0.15em letter-spacing · accent color</p>
+          </div>
+          <div class="sg-type-row">
+            <span class="font-serif italic" style="font-size:2rem; color:hsl(var(--accent-warm)); font-weight:300;">Display italic accent</span>
+            <p class="meta">.font-serif.italic · used in hero h1</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUTTONS -->
+      <section class="sg-section">
+        <h2>Buttons</h2>
+        <p class="sg-desc">Pill-shaped buttons. Primary uses terracotta, secondary is link-style.</p>
+        <div class="sg-card">
+          <div class="sg-row">
+            <button class="btn btn-primary">Primary Button
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <button class="btn btn-secondary">Secondary Button</button>
+            <span class="badge-warm">Badge Warm</span>
+          </div>
+          <code class="sg-code">&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;span class="badge-warm"&gt;Badge&lt;/span&gt;</code>
+        </div>
+      </section>
+
+      <!-- ICON BUTTONS -->
+      <section class="sg-section">
+        <h2>Icon Buttons</h2>
+        <p class="sg-desc">Round arrow buttons used for carousel navigation and section paging.</p>
+        <div class="sg-card">
+          <div class="sg-row">
+            <button class="arrow-btn" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button class="arrow-btn" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+            <span class="section-number">1</span>
+            <span class="section-number">2</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- BULLET LIST -->
+      <section class="sg-section">
+        <h2>Bullet List</h2>
+        <p class="sg-desc">Arrow-style bullets used for principles, constraints, and key learnings.</p>
+        <div class="sg-card">
+          <div class="bullet-list cols-2">
+            <div class="bullet-row">
+              <span class="bullet-icon-wrap"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10H16M16 10L12 6M16 10L12 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><h4>Bullet Title</h4><p>Concise supporting copy describing the principle, decision, or learning.</p></div>
+            </div>
+            <div class="bullet-row">
+              <span class="bullet-icon-wrap"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10H16M16 10L12 6M16 10L12 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><h4>Another Item</h4><p>Use <code>cols-2</code> on <code>.bullet-list</code> for a two-column grid at md+.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="sg-section">
+        <h2>Stats — Compact</h2>
+        <p class="sg-desc">Inline metadata cluster used in executive summaries.</p>
+        <div class="sg-card" style="padding:0; border:none; background:transparent;">
+          <div class="stats-compact" style="margin-bottom:0;">
+            <div><p class="stat-label">Company</p><p class="stat-value">Salesforce</p></div>
+            <div><p class="stat-label">Timeline</p><p class="stat-value">10 months</p></div>
+            <div><p class="stat-label">Platform</p><p class="stat-value">Web-Based CRM</p></div>
+            <div><p class="stat-label">My Role</p><p class="stat-value">Creative Director</p></div>
+          </div>
+        </div>
+
+        <h2 style="margin-top:3rem;">Stats — Large</h2>
+        <p class="sg-desc">Hero impact metrics used in outcome sections.</p>
+        <div class="stats-large" style="margin-top:0;">
+          <div class="stats-large-item"><p class="stats-large-value">+45%</p><p class="item-label">Daily Active Users</p><p class="item-desc">Increase in engaged users within 3 months.</p></div>
+          <div class="stats-large-item"><p class="stats-large-value">-30%</p><p class="item-label">Support Tickets</p><p class="item-desc">Reduction in customer service inquiries.</p></div>
+          <div class="stats-large-item"><p class="stats-large-value">67</p><p class="item-label">Net Promoter Score</p><p class="item-desc">Up from 32 pre-redesign.</p></div>
+        </div>
+      </section>
+
+      <!-- HERO IMAGE / ASPECTS -->
+      <section class="sg-section">
+        <h2>Image Containers</h2>
+        <p class="sg-desc">Bordered, rounded image frame in 21:9, 16:9, square, and 3:4 aspects.</p>
+        <div class="sg-card" style="display:grid; gap:1.5rem;">
+          <div class="hero-image-container aspect-21-9"><div class="placeholder-text"><p class="pt-title">21:9 Hero</p><p class="pt-sub">.aspect-21-9</p></div></div>
+          <div class="hero-image-container aspect-video"><div class="placeholder-text"><p class="pt-title">16:9 Video</p><p class="pt-sub">.aspect-video</p></div></div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+            <div class="hero-image-container aspect-square"><div class="placeholder-text"><p class="pt-title">Square</p><p class="pt-sub">.aspect-square</p></div></div>
+            <div class="hero-image-container aspect-portrait"><div class="placeholder-text"><p class="pt-title">3:4 Portrait</p><p class="pt-sub">.aspect-portrait</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TWO COLUMN -->
+      <section class="sg-section">
+        <h2>Two-Column Block</h2>
+        <p class="sg-desc">Text + image module. Stack vertically on mobile; side-by-side on md+.</p>
+        <div class="sg-card">
+          <div class="two-col" style="margin:0;">
+            <div class="text-col">
+              <h3 class="font-serif" style="font-size:1.5rem;">Module Title</h3>
+              <p>Body copy explaining the topic with one or two short paragraphs.</p>
+            </div>
+            <div class="hero-image-container aspect-video"><div class="placeholder-text"><p class="pt-title">Image</p><p class="pt-sub">Image placeholder</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMAGE CAROUSEL -->
+      <section class="sg-section">
+        <h2>Image Carousel</h2>
+        <p class="sg-desc">Scoped carousel with caption tab and side navigation. Multiple instances per page supported.</p>
+        <div class="sg-card">
+          <div class="image-carousel" data-image-carousel>
+            <div class="ic-viewport">
+              <div class="ic-track" data-ic-track>
+                <div class="ic-slide">
+                  <div class="ic-frame"><div class="placeholder-text"><p class="pt-title">Slide One</p><p class="pt-sub">Image placeholder</p></div></div>
+                  <div class="carousel-caption"><p class="cc-title">Slide One</p><p class="cc-text">Caption text describing the slide.</p></div>
+                </div>
+                <div class="ic-slide">
+                  <div class="ic-frame"><div class="placeholder-text"><p class="pt-title">Slide Two</p><p class="pt-sub">Image placeholder</p></div></div>
+                  <div class="carousel-caption"><p class="cc-title">Slide Two</p><p class="cc-text">Caption text describing the slide.</p></div>
+                </div>
+              </div>
+            </div>
+            <button class="ic-nav prev" data-ic-prev aria-label="Previous slide"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button class="ic-nav next" data-ic-next aria-label="Next slide"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION HEADER -->
+      <section class="sg-section">
+        <h2>Section Header</h2>
+        <p class="sg-desc">Numbered section heading used to anchor case study chapters.</p>
+        <div class="sg-card">
+          <div class="section-header">
+            <span class="section-number">1</span>
+            <h2 style="margin:0;">Context and Challenge</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHADOWS / RADIUS -->
+      <section class="sg-section">
+        <h2>Elevation & Radius</h2>
+        <p class="sg-desc">Soft warm shadows tinted with the primary terracotta. Radii scale from 0.5rem (controls) to 1.5rem (cards).</p>
+        <div class="sg-grid">
+          <div class="surface-card" style="box-shadow: var(--shadow-warm);"><p style="margin:0; font-weight:600;">--shadow-warm</p><p class="meta" style="margin:0.25rem 0 0; color:hsl(var(--text-subtle)); font-size:0.75rem;">soft hover lift</p></div>
+          <div class="surface-card" style="box-shadow: var(--shadow-warm-strong);"><p style="margin:0; font-weight:600;">--shadow-warm-strong</p><p class="meta" style="margin:0.25rem 0 0; color:hsl(var(--text-subtle)); font-size:0.75rem;">elevated card</p></div>
+          <div class="surface-card" style="border-radius:0.5rem;"><p style="margin:0; font-weight:600;">radius: 0.5rem</p></div>
+          <div class="surface-card" style="border-radius:1rem;"><p style="margin:0; font-weight:600;">radius: 1rem</p></div>
+          <div class="surface-card" style="border-radius:1.5rem;"><p style="margin:0; font-weight:600;">radius: 1.5rem</p></div>
+        </div>
+      </section>
+
+      <div style="height:4rem;"></div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container-page">
+      <div class="footer-row">
+        <div>
+          <p class="footer-name">John Donohoe</p>
+          <p class="footer-sub">UX Designer · San Francisco, CA</p>
+        </div>
+        <div>
+          <p class="footer-cta">Interested in working together?</p>
+          <a href="#" class="footer-link">Get in touch →</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/jfdonohoe/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg></a>
+          <a href="mailto:john@donohoeux.com" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year></span> John Donohoe. Designed with care.</p>
+        <a href="styleguide.html">Styleguide</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
