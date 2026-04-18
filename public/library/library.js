@@ -117,6 +117,66 @@
     });
   }
 
+  /* Modal */
+  function initModals() {
+    $$("[data-modal-open]").forEach(btn => btn.addEventListener("click", () => {
+      const m = document.getElementById(btn.getAttribute("data-modal-open"));
+      if (m) m.classList.add("is-open");
+    }));
+    $$(".modal-overlay").forEach(m => {
+      m.addEventListener("click", e => { if (e.target === m) m.classList.remove("is-open"); });
+      $$("[data-modal-close]", m).forEach(b => b.addEventListener("click", () => m.classList.remove("is-open")));
+    });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") $$(".modal-overlay.is-open").forEach(m => m.classList.remove("is-open"));
+    });
+  }
+
+  /* Dropdown */
+  function initDropdowns() {
+    $$("[data-dropdown]").forEach(dd => {
+      const trig = $("[data-dropdown-trigger]", dd);
+      trig && trig.addEventListener("click", e => {
+        e.stopPropagation();
+        const wasOpen = dd.classList.contains("is-open");
+        $$("[data-dropdown].is-open").forEach(o => o.classList.remove("is-open"));
+        if (!wasOpen) dd.classList.add("is-open");
+      });
+    });
+    document.addEventListener("click", () => $$("[data-dropdown].is-open").forEach(o => o.classList.remove("is-open")));
+  }
+
+  /* Toast */
+  function ensureToastRegion() {
+    let r = $(".toast-region");
+    if (!r) { r = document.createElement("div"); r.className = "toast-region"; document.body.appendChild(r); }
+    return r;
+  }
+  window.libToast = function (msg, variant) {
+    const r = ensureToastRegion();
+    const t = document.createElement("div");
+    t.className = "toast" + (variant ? " toast-" + variant : "");
+    t.textContent = msg;
+    r.appendChild(t);
+    setTimeout(() => { t.classList.add("is-leaving"); setTimeout(() => t.remove(), 200); }, 3200);
+  };
+  function initToasts() {
+    $$("[data-toast]").forEach(btn => btn.addEventListener("click", () => {
+      window.libToast(btn.getAttribute("data-toast-msg") || "Saved successfully", btn.getAttribute("data-toast") || "success");
+    }));
+  }
+
+  /* Pagination demo */
+  function initPagination() {
+    $$("[data-pagination]").forEach(root => {
+      const btns = $$("button[data-page]", root);
+      btns.forEach(b => b.addEventListener("click", () => {
+        btns.forEach(x => x.classList.remove("is-current"));
+        b.classList.add("is-current");
+      }));
+    });
+  }
+
   /* Reveal on scroll */
   function initReveal() {
     const els = $$(".reveal-init");
@@ -129,6 +189,8 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     initYear(); initConstellation(); initAboutCarousel(); initImageCarousels();
-    initVideoPlayers(); initTabs(); initAccordion(); initReveal();
+    initVideoPlayers(); initTabs(); initAccordion();
+    initModals(); initDropdowns(); initToasts(); initPagination();
+    initReveal();
   });
 })();
