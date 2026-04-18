@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Line Chart — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Data Visualization</p><h1>Line Chart</h1>
+<p>Single- or multi-series line chart for trends over time. Hover any point for a tooltip. Pass an array of <code>{x, y}</code> points; wrap multiple series in an outer array and add <code>data-viz-legend</code>.</p>
+
+<div class="lib-demo">
+  <div class="viz" data-viz-type="line"
+    data-viz='[{"x":"Jan","y":12},{"x":"Feb","y":19},{"x":"Mar","y":15},{"x":"Apr","y":27},{"x":"May","y":24},{"x":"Jun","y":33},{"x":"Jul","y":38},{"x":"Aug","y":31},{"x":"Sep","y":42}]'>
+    <p class="viz-title">Single series — Monthly active users (k)</p>
+  </div>
+</div>
+
+<div class="lib-demo" style="margin-top:1.5rem;">
+  <div class="viz" data-viz-type="line" data-viz-legend='["Acme","Globex","Initech"]'
+    data-viz='[
+      [{"x":"Q1","y":24},{"x":"Q2","y":31},{"x":"Q3","y":42},{"x":"Q4","y":48}],
+      [{"x":"Q1","y":18},{"x":"Q2","y":22},{"x":"Q3","y":28},{"x":"Q4","y":35}],
+      [{"x":"Q1","y":12},{"x":"Q2","y":19},{"x":"Q3","y":15},{"x":"Q4","y":24}]
+    ]'>
+    <p class="viz-title">Multi series — Quarterly revenue ($M)</p>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="viz" data-viz-type="line"
+  data-viz='[{"x":"Jan","y":12},{"x":"Feb","y":19}, ...]'&gt;
+  &lt;p class="viz-title"&gt;Monthly active users&lt;/p&gt;
+&lt;/div&gt;</code>
+
+<script src="../library.js"></script></main></body></html>

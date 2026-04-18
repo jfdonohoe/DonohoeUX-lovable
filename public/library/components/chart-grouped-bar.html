@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grouped Bar Chart — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Data Visualization</p><h1>Grouped Bar</h1>
+<p>Side-by-side bars compare multiple series at each category. Provide groups as <code>{label, values: [...]}</code> and a parallel <code>data-viz-legend</code>.</p>
+
+<div class="lib-demo">
+  <div class="viz" data-viz-type="grouped-bar" data-viz-legend='["Mobile","Desktop","Tablet"]'
+    data-viz='[
+      {"label":"Jan","values":[34,28,12]},
+      {"label":"Feb","values":[42,33,15]},
+      {"label":"Mar","values":[38,36,18]},
+      {"label":"Apr","values":[51,40,21]},
+      {"label":"May","values":[58,44,19]},
+      {"label":"Jun","values":[62,48,22]}
+    ]'>
+    <p class="viz-title">Sessions by device — first half</p>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="viz" data-viz-type="grouped-bar"
+  data-viz-legend='["Mobile","Desktop","Tablet"]'
+  data-viz='[{"label":"Jan","values":[34,28,12]}, ...]'&gt;&lt;/div&gt;</code>
+
+<script src="../library.js"></script></main></body></html>

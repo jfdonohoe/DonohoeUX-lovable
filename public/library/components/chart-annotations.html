@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Annotated Chart — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Data Visualization</p><h1>Annotations</h1>
+<p>Line chart with a labeled threshold line. Useful for SLAs, targets, or budget caps. Payload: <code>{series, threshold, label}</code>.</p>
+
+<div class="lib-demo">
+  <div class="viz" data-viz-type="annotations"
+    data-viz='{
+      "series":[{"x":"W1","y":62},{"x":"W2","y":71},{"x":"W3","y":68},{"x":"W4","y":78},{"x":"W5","y":84},{"x":"W6","y":92},{"x":"W7","y":88},{"x":"W8","y":96}],
+      "threshold":80,
+      "label":"SLA target"
+    }'>
+    <p class="viz-title">Response time (ms) vs. SLA</p>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="viz" data-viz-type="annotations"
+  data-viz='{"series":[...], "threshold":80, "label":"SLA target"}'&gt;&lt;/div&gt;</code>
+
+<script src="../library.js"></script></main></body></html>

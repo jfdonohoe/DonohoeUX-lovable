@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sankey — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Data Visualization</p><h1>Sankey Flow</h1>
+<p>Visualize flow magnitudes between stages. Provide <code>nodes</code> with <code>id</code>, <code>label</code>, and integer <code>column</code> position; <code>links</code> reference node ids and a <code>value</code>.</p>
+
+<div class="lib-demo">
+  <div class="viz" data-viz-type="sankey"
+    data-viz='{
+      "nodes":[
+        {"id":"src1","label":"Organic","column":0},
+        {"id":"src2","label":"Paid","column":0},
+        {"id":"src3","label":"Referral","column":0},
+        {"id":"signup","label":"Signed up","column":1},
+        {"id":"trial","label":"Started trial","column":1},
+        {"id":"paid","label":"Paid plan","column":2},
+        {"id":"churn","label":"Churned","column":2}
+      ],
+      "links":[
+        {"source":"src1","target":"signup","value":120},
+        {"source":"src1","target":"trial","value":80},
+        {"source":"src2","target":"signup","value":60},
+        {"source":"src2","target":"trial","value":140},
+        {"source":"src3","target":"signup","value":40},
+        {"source":"src3","target":"trial","value":50},
+        {"source":"signup","target":"paid","value":90},
+        {"source":"signup","target":"churn","value":130},
+        {"source":"trial","target":"paid","value":160},
+        {"source":"trial","target":"churn","value":110}
+      ]
+    }'>
+    <p class="viz-title">Acquisition → activation → outcome</p>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="viz" data-viz-type="sankey"
+  data-viz='{"nodes":[{"id":"src1","label":"Organic","column":0}, ...],
+             "links":[{"source":"src1","target":"signup","value":120}, ...]}'&gt;&lt;/div&gt;</code>
+
+<script src="../library.js"></script></main></body></html>

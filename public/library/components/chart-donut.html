@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Donut Chart — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Data Visualization</p><h1>Donut Chart</h1>
+<p>Categorical share of a whole. Provide <code>[{label, value}]</code>. Optional <code>data-viz-center</code> renders a label inside the hole.</p>
+
+<div class="lib-demo">
+  <div class="viz" data-viz-type="donut"
+    data-viz-center='{"value":"$1.2M","label":"Total revenue"}'
+    data-viz='[
+      {"label":"Subscriptions","value":540},
+      {"label":"Services","value":280},
+      {"label":"Marketplace","value":210},
+      {"label":"Other","value":170}
+    ]'>
+    <p class="viz-title">Revenue mix — last quarter</p>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="viz" data-viz-type="donut"
+  data-viz-center='{"value":"$1.2M","label":"Total revenue"}'
+  data-viz='[{"label":"Subscriptions","value":540}, ...]'&gt;&lt;/div&gt;</code>
+
+<script src="../library.js"></script></main></body></html>
