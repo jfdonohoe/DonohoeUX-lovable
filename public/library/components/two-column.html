@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two-Column Block — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Layout</p><h1>Two-Column Block</h1>
+<p>Stacks vertically on mobile; 1:1 columns on md+. Swap the order of <code>.text-col</code> and the image to flip sides.</p>
+
+<div class="lib-demo">
+  <div class="two-col" style="margin:0;">
+    <div class="text-col">
+      <h3 class="font-serif" style="font-size:1.5rem;">Module Title</h3>
+      <p>Body copy explaining the topic. Keep to one or two short paragraphs so the image carries equal visual weight.</p>
+      <p>Use <code>aspect-video</code>, <code>aspect-square</code>, or <code>aspect-portrait</code> on the image container.</p>
+    </div>
+    <div class="hero-image-container aspect-video"><div class="placeholder-text"><p class="pt-title">Image</p><p class="pt-sub">aspect-video</p></div></div>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="two-col"&gt;
+  &lt;div class="text-col"&gt;
+    &lt;h3 class="font-serif"&gt;Module Title&lt;/h3&gt;
+    &lt;p&gt;Body copy.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="hero-image-container aspect-video"&gt;&lt;img src="..." alt=""&gt;&lt;/div&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

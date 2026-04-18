@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spacing & Radius — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Foundation</p><h1>Spacing, Radius & Elevation</h1>
+<p>The site uses a soft, generous rhythm. Cards round at 1–1.5rem; controls at 0.5rem. Shadows are tinted with the terracotta accent for warmth.</p>
+
+<h2 style="margin-top:2rem;">Container</h2>
+<code class="lib-code">.container-page  max-width: 1280px; padding: 0 1.5rem; (3rem at lg+)</code>
+
+<h2 style="margin-top:2rem;">Radius</h2>
+<div class="sg-grid">
+  <div class="surface-card" style="border-radius:0.5rem;"><p style="margin:0;font-weight:600;">0.5rem</p><p class="meta" style="margin:0.25rem 0 0;color:hsl(var(--text-subtle));font-size:0.75rem;">controls, code blocks</p></div>
+  <div class="surface-card" style="border-radius:1rem;"><p style="margin:0;font-weight:600;">1rem</p><p class="meta" style="margin:0.25rem 0 0;color:hsl(var(--text-subtle));font-size:0.75rem;">small cards, demos</p></div>
+  <div class="surface-card" style="border-radius:1.5rem;"><p style="margin:0;font-weight:600;">1.5rem</p><p class="meta" style="margin:0.25rem 0 0;color:hsl(var(--text-subtle));font-size:0.75rem;">large cards, image frames</p></div>
+  <div class="surface-card" style="border-radius:9999px;"><p style="margin:0;font-weight:600;">9999px</p><p class="meta" style="margin:0.25rem 0 0;color:hsl(var(--text-subtle));font-size:0.75rem;">buttons, badges, avatars</p></div>
+</div>
+
+<h2 style="margin-top:2rem;">Shadows</h2>
+<div class="sg-grid">
+  <div class="surface-card" style="box-shadow: var(--shadow-warm);"><p style="margin:0;font-weight:600;">--shadow-warm</p><p class="meta" style="margin:0.25rem 0 0;color:hsl(var(--text-subtle));font-size:0.75rem;">0 20px 40px -20px hsl(12 76% 61% / 0.10)</p></div>
+  <div class="surface-card" style="box-shadow: var(--shadow-warm-strong);"><p style="margin:0;font-weight:600;">--shadow-warm-strong</p><p class="meta" style="margin:0.25rem 0 0;color:hsl(var(--text-subtle));font-size:0.75rem;">0 25px 50px -12px hsl(12 76% 61% / 0.18)</p></div>
+</div>
+
+<h2 style="margin-top:2rem;">Section rhythm</h2>
+<code class="lib-code">/* Vertical spacing pattern */
+section { padding: 4rem 0; }      /* default */
+@media (min-width: 1024px) {
+  section { padding: 6rem 0; }    /* large screens */
+}
+hr.section-divider { margin: 3rem 0; }</code>
+<script src="../library.js"></script></main></body></html>

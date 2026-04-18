@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reveal on Scroll — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Motion — Interactive</p><h1>Reveal on Scroll</h1>
+<p>Add <code>.reveal-init</code> to any element and it will fade + translate into place as it enters the viewport (IntersectionObserver, threshold 0.12). Scroll to see it trigger.</p>
+
+<div style="height:60vh;display:flex;align-items:flex-end;color:hsl(var(--text-subtle));"><p>↓ Scroll down ↓</p></div>
+
+<div class="reveal-init lib-demo">
+  <h3 class="font-serif" style="margin-top:0;">I appear smoothly</h3>
+  <p>This card fades up when 12% of it is on screen. Reload to replay.</p>
+</div>
+
+<div style="height:30vh;"></div>
+
+<div class="reveal-init lib-demo">
+  <h3 class="font-serif" style="margin-top:0;">Another reveal</h3>
+  <p>Each instance is independent.</p>
+</div>
+
+<code class="lib-code">&lt;div class="reveal-init"&gt;
+  Content that fades in on scroll.
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

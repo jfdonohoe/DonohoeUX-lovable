@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Color Tokens — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Foundation</p><h1>Color Tokens</h1>
+<p>All colors are stored as raw HSL channels in CSS custom properties on <code>:root</code>, so they compose with opacity (e.g. <code>hsl(var(--accent-warm) / 0.5)</code>). Reference them via the utility classes (<code>.bg-accent-warm</code>, <code>.text-accent</code>) or directly in custom rules.</p>
+<div class="lib-meta"><span><strong>Files:</strong> library.css :root</span><span><strong>Format:</strong> H S% L%</span></div>
+
+<h2 style="margin-top:2rem;">Brand & Surfaces</h2>
+<div class="sg-grid">
+  <div class="sg-swatch"><div class="swatch-color bg-accent-warm-light"></div><div class="swatch-meta"><p class="swatch-name">Accent Warm Light</p><p class="swatch-token">--accent-warm-light · 12 60% 94%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color bg-accent-warm"></div><div class="swatch-meta"><p class="swatch-name">Accent Warm</p><p class="swatch-token">--accent-warm · 12 76% 61%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color bg-accent-warm-dark"></div><div class="swatch-meta"><p class="swatch-name">Accent Warm Dark</p><p class="swatch-token">--accent-warm-dark · 12 70% 45%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color bg-surface-warm"></div><div class="swatch-meta"><p class="swatch-name">Surface Warm</p><p class="swatch-token">--surface-warm · 30 40% 96%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color bg-surface-elevated" style="border-bottom:1px solid hsl(var(--border-light));"></div><div class="swatch-meta"><p class="swatch-name">Surface Elevated</p><p class="swatch-token">--surface-elevated · 0 0% 100%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--background));border-bottom:1px solid hsl(var(--border-light));"></div><div class="swatch-meta"><p class="swatch-name">Background</p><p class="swatch-token">--background · 40 33% 98%</p></div></div>
+</div>
+
+<h2 style="margin-top:2rem;">Container Fills — Blue</h2>
+<div class="sg-grid">
+  <div class="sg-swatch"><div class="swatch-color bg-fill-blue-light"></div><div class="swatch-meta"><p class="swatch-name">Fill Blue Light</p><p class="swatch-token">--fill-blue-light · 210 60% 94%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color bg-fill-blue"></div><div class="swatch-meta"><p class="swatch-name">Fill Blue</p><p class="swatch-token">--fill-blue · 197 76% 61%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color bg-fill-blue-dark"></div><div class="swatch-meta"><p class="swatch-name">Fill Blue Dark</p><p class="swatch-token">--fill-blue-dark · 201 70% 45%</p></div></div>
+</div>
+
+<h2 style="margin-top:2rem;">Container Fills — Purple</h2>
+<div class="sg-grid">
+  <div class="sg-swatch"><div class="swatch-color bg-fill-purp-light"></div><div class="swatch-meta"><p class="swatch-name">Fill Purp Light</p><p class="swatch-token">--fill-purp-light · 253 60% 94%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color bg-fill-purp"></div><div class="swatch-meta"><p class="swatch-name">Fill Purp</p><p class="swatch-token">--fill-purp · 262 76% 61%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color bg-fill-purp-dark"></div><div class="swatch-meta"><p class="swatch-name">Fill Purp Dark</p><p class="swatch-token">--fill-purp-dark · 262 70% 45%</p></div></div>
+</div>
+
+<h2 style="margin-top:2rem;">Container Fills — Green</h2>
+<div class="sg-grid">
+  <div class="sg-swatch"><div class="swatch-color bg-fill-green-light"></div><div class="swatch-meta"><p class="swatch-name">Fill Green Light</p><p class="swatch-token">--fill-green-light · 134 56% 89%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color bg-fill-green"></div><div class="swatch-meta"><p class="swatch-name">Fill Green</p><p class="swatch-token">--fill-green · 134 71% 60%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color bg-fill-green-dark"></div><div class="swatch-meta"><p class="swatch-name">Fill Green Dark</p><p class="swatch-token">--fill-green-dark · 138 72% 43%</p></div></div>
+</div>
+
+<h2 style="margin-top:2rem;">Text & Borders</h2>
+<div class="sg-grid">
+  <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--text-display));"></div><div class="swatch-meta"><p class="swatch-name">Text Display</p><p class="swatch-token">--text-display · 220 25% 12%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--text-body));"></div><div class="swatch-meta"><p class="swatch-name">Text Body</p><p class="swatch-token">--text-body · 220 15% 30%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--text-subtle));"></div><div class="swatch-meta"><p class="swatch-name">Text Subtle</p><p class="swatch-token">--text-subtle · 220 10% 55%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--border));"></div><div class="swatch-meta"><p class="swatch-name">Border</p><p class="swatch-token">--border · 40 20% 88%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--border-light));"></div><div class="swatch-meta"><p class="swatch-name">Border Light</p><p class="swatch-token">--border-light · 40 20% 92%</p></div></div>
+  <div class="sg-swatch"><div class="swatch-color" style="background:hsl(var(--muted));"></div><div class="swatch-meta"><p class="swatch-name">Muted</p><p class="swatch-token">--muted · 40 15% 90%</p></div></div>
+</div>
+
+<h2 style="margin-top:2rem;">Usage</h2>
+<code class="lib-code">/* Direct */
+background-color: hsl(var(--accent-warm));
+background-color: hsl(var(--accent-warm) / 0.15);
+
+/* Utility classes */
+&lt;div class="bg-fill-blue-light"&gt;...&lt;/div&gt;
+&lt;span class="text-accent"&gt;Highlighted phrase&lt;/span&gt;</code>
+<script src="../library.js"></script></main></body></html>

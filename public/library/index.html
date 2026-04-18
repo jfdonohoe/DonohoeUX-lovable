@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donohoe UX — Component Library</title>
+  <meta name="description" content="Catalog of every reusable component, token, and pattern in the Donohoe UX design language. Each entry links to a self-contained example page.">
+  <link rel="canonical" href="./index.html">
+  <link rel="stylesheet" href="library.css">
+</head>
+<body>
+  <main class="container-page">
+    <header class="lib-header">
+      <p class="label">Design Language Repository</p>
+      <h1>Donohoe UX <span class="font-serif italic" style="color:hsl(var(--accent-warm)); font-weight:300;">Component Library</span></h1>
+      <p class="lede" style="max-width:48rem;">Self-contained HTML/CSS/JS reference. Every component lives in its own file under <code>/library/components/</code>, sharing one stylesheet (<code>library.css</code>) and one script (<code>library.js</code>). Use this index to discover what's available; open any component file to see live markup, props, and usage notes.</p>
+    </header>
+
+    <section class="lib-shell">
+      <h2 style="margin-bottom:1.5rem;">Foundations</h2>
+      <div class="lib-toc">
+        <a href="components/colors.html"><span class="toc-cat">Foundation</span><span class="toc-name">Color Tokens</span><span class="toc-desc">HSL palette: terracotta accent, blue/purple/green fills, surfaces, text, borders.</span></a>
+        <a href="components/typography.html"><span class="toc-cat">Foundation</span><span class="toc-name">Typography</span><span class="toc-desc">Cormorant Garamond display + Inter body. Heading scale, eyebrow, accent.</span></a>
+        <a href="components/spacing.html"><span class="toc-cat">Foundation</span><span class="toc-name">Spacing & Radius</span><span class="toc-desc">Container max-width, section rhythm, radius tokens, warm shadows.</span></a>
+        <a href="components/icons.html"><span class="toc-cat">Foundation</span><span class="toc-name">Icon Set</span><span class="toc-desc">Inline SVG icons (arrows, mail, linkedin, chevrons, play, mute).</span></a>
+      </div>
+
+      <h2 style="margin:3rem 0 1.5rem;">Layout & Navigation</h2>
+      <div class="lib-toc">
+        <a href="components/site-nav.html"><span class="toc-cat">Layout</span><span class="toc-name">Site Nav</span><span class="toc-desc">Fixed top bar with blur, logo, and active-route underline.</span></a>
+        <a href="components/site-footer.html"><span class="toc-cat">Layout</span><span class="toc-name">Site Footer</span><span class="toc-desc">Three-column footer with name, CTA, social icons, and copyright row.</span></a>
+        <a href="components/section-header.html"><span class="toc-cat">Layout</span><span class="toc-name">Section Header</span><span class="toc-desc">Numbered terracotta circle paired with an h2 chapter title.</span></a>
+        <a href="components/two-column.html"><span class="toc-cat">Layout</span><span class="toc-name">Two-Column Block</span><span class="toc-desc">Text + image side-by-side; reverses on mobile.</span></a>
+        <a href="components/figure-caption.html"><span class="toc-cat">Layout</span><span class="toc-name">Figure with Caption</span><span class="toc-desc">Hero image with centered italic caption beneath.</span></a>
+      </div>
+
+      <h2 style="margin:3rem 0 1.5rem;">Controls</h2>
+      <div class="lib-toc">
+        <a href="components/buttons.html"><span class="toc-cat">Control</span><span class="toc-name">Buttons</span><span class="toc-desc">Primary (terracotta pill), secondary (link-style), with optional arrow.</span></a>
+        <a href="components/icon-buttons.html"><span class="toc-cat">Control</span><span class="toc-name">Icon Buttons</span><span class="toc-desc">Round arrow buttons used for paging and carousels.</span></a>
+        <a href="components/badge.html"><span class="toc-cat">Control</span><span class="toc-name">Badge</span><span class="toc-desc">Small terracotta-tinted pill for tags and labels.</span></a>
+      </div>
+
+      <h2 style="margin:3rem 0 1.5rem;">Content Modules</h2>
+      <div class="lib-toc">
+        <a href="components/hero.html"><span class="toc-cat">Module</span><span class="toc-name">Hero</span><span class="toc-desc">Homepage hero with eyebrow, italic accent headline, CTAs, headshot.</span></a>
+        <a href="components/exec-summary.html"><span class="toc-cat">Module</span><span class="toc-name">Executive Summary</span><span class="toc-desc">Case study intro: label, h1, compact stats, three accent subsections.</span></a>
+        <a href="components/stats-compact.html"><span class="toc-cat">Module</span><span class="toc-name">Stats — Compact</span><span class="toc-desc">Inline metadata cluster (Company, Timeline, Platform, Role).</span></a>
+        <a href="components/stats-large.html"><span class="toc-cat">Module</span><span class="toc-name">Stats — Large</span><span class="toc-desc">Hero metrics card row used in outcome sections.</span></a>
+        <a href="components/bullet-list.html"><span class="toc-cat">Module</span><span class="toc-name">Bullet List</span><span class="toc-desc">Arrow-style bullets, single or two-column.</span></a>
+        <a href="components/image-container.html"><span class="toc-cat">Module</span><span class="toc-name">Image Containers</span><span class="toc-desc">Bordered, rounded image frame in 21:9, 16:9, square, 3:4.</span></a>
+        <a href="components/about-carousel.html"><span class="toc-cat">Module</span><span class="toc-name">About Carousel</span><span class="toc-desc">Tabbed horizontal carousel with prev/next, used on homepage About.</span></a>
+        <a href="components/image-carousel.html"><span class="toc-cat">Module</span><span class="toc-name">Image Carousel</span><span class="toc-desc">Slide-based carousel with side nav and caption tab beneath.</span></a>
+        <a href="components/video-player.html"><span class="toc-cat">Module</span><span class="toc-name">Video Player</span><span class="toc-desc">Custom HTML5 player with overlay play, progress bar, mute toggle.</span></a>
+        <a href="components/tabs.html"><span class="toc-cat">Module</span><span class="toc-name">Tabs</span><span class="toc-desc">Underlined tab bar with switchable panels (interactive).</span></a>
+        <a href="components/accordion.html"><span class="toc-cat">Module</span><span class="toc-name">Accordion</span><span class="toc-desc">Expand/collapse rows for FAQs and progressive disclosure.</span></a>
+      </div>
+
+      <h2 style="margin:3rem 0 1.5rem;">Decoration & Motion</h2>
+      <div class="lib-toc">
+        <a href="components/constellation.html"><span class="toc-cat">Decoration</span><span class="toc-name">Constellation Flourish</span><span class="toc-desc">Animated dotted-network SVG that rings the headshot.</span></a>
+        <a href="components/svg-overlay.html"><span class="toc-cat">Decoration</span><span class="toc-name">SVG Overlay</span><span class="toc-desc">Decorative arc + arrow accent placed near hero text.</span></a>
+        <a href="components/reveal.html"><span class="toc-cat">Motion</span><span class="toc-name">Reveal on Scroll</span><span class="toc-desc">IntersectionObserver-driven fade/translate reveal utility.</span></a>
+        <a href="components/animations.html"><span class="toc-cat">Motion</span><span class="toc-name">Animation Utilities</span><span class="toc-desc">animate-fade-up + delay utilities for sequenced entrance.</span></a>
+      </div>
+    </section>
+
+    <footer class="site-footer" style="margin-top:0;">
+      <div class="footer-bottom" style="margin-top:0; border:none;">
+        <p>© <span data-year></span> Donohoe UX. Component library.</p>
+        <a href="../standalone/index.html">View standalone site →</a>
+      </div>
+    </footer>
+  </main>
+  <script src="library.js"></script>
+</body>
+</html>

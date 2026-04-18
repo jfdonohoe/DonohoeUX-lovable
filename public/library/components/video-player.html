@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Video Player — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Module — Interactive</p><h1>Video Player</h1>
+<p>Custom HTML5 player with terracotta circular play button overlay, scrubbable progress bar, and mute toggle. Click anywhere on the video or the overlay button to play/pause.</p>
+<div class="lib-meta">
+  <span><strong>JS hooks:</strong> data-video-player · data-vp-play · data-vp-toggle · data-vp-mute</span>
+  <span><strong>Aspect:</strong> 16:9 by default</span>
+</div>
+
+<div class="video-player" data-video-player style="margin-top:1.5rem;">
+  <video data-vp-toggle preload="metadata" playsinline poster="../assets/about_satisfaction.png">
+    <source src="https://cdn.jsdelivr.net/gh/mediaelement/mediaelement-files@master/big_buck_bunny.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+  <div class="vp-overlay">
+    <button class="vp-play" data-vp-play aria-label="Play">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+  </div>
+  <div class="vp-controls">
+    <button class="vp-btn" data-vp-toggle aria-label="Play/Pause">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+    <div class="vp-progress"><span class="vp-progress-fill"></span></div>
+    <span class="vp-time">0:00 / 0:00</span>
+    <button class="vp-btn" data-vp-mute aria-label="Mute">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+    </button>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="video-player" data-video-player&gt;
+  &lt;video data-vp-toggle preload="metadata" playsinline poster="poster.jpg"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;/video&gt;
+  &lt;div class="vp-overlay"&gt;
+    &lt;button class="vp-play" data-vp-play aria-label="Play"&gt;&lt;svg .../&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="vp-controls"&gt;
+    &lt;button class="vp-btn" data-vp-toggle aria-label="Play/Pause"&gt;&lt;svg .../&gt;&lt;/button&gt;
+    &lt;div class="vp-progress"&gt;&lt;span class="vp-progress-fill"&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;span class="vp-time"&gt;0:00 / 0:00&lt;/span&gt;
+    &lt;button class="vp-btn" data-vp-mute aria-label="Mute"&gt;&lt;svg .../&gt;&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

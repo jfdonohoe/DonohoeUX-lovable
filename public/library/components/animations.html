@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Animation Utilities — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Motion</p><h1>Animation Utilities</h1>
+<p>Pre-built CSS keyframes used for sequenced entrance. Apply <code>.animate-fade-up</code> with optional <code>.delay-100</code>/<code>.delay-200</code>/<code>.delay-300</code> for a staggered cascade. Reload to replay.</p>
+
+<div class="lib-demo">
+  <p class="animate-fade-up" style="margin:0;">First — no delay</p>
+  <p class="animate-fade-up delay-100" style="margin:0.75rem 0 0;">Second — 100ms delay</p>
+  <p class="animate-fade-up delay-200" style="margin:0.75rem 0 0;">Third — 200ms delay</p>
+  <p class="animate-fade-up delay-300" style="margin:0.75rem 0 0;">Fourth — 300ms delay</p>
+</div>
+
+<h2 style="margin-top:2rem;">Other keyframes</h2>
+<ul>
+  <li><code>drawLine</code> — strokes a dashed path (used by the constellation).</li>
+  <li><code>popIn</code> — scales a dot from 0 → 1 (used by the constellation).</li>
+  <li><code>fadeUp</code> — opacity 0→1 + translateY 30px→0 over 0.8s.</li>
+</ul>
+
+<code class="lib-code">&lt;p class="animate-fade-up"&gt;First&lt;/p&gt;
+&lt;p class="animate-fade-up delay-100"&gt;Second&lt;/p&gt;
+&lt;p class="animate-fade-up delay-200"&gt;Third&lt;/p&gt;
+&lt;p class="animate-fade-up delay-300"&gt;Fourth&lt;/p&gt;</code>
+<script src="../library.js"></script></main></body></html>

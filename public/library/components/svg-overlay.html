@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SVG Overlay — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Decoration</p><h1>SVG Overlay — Arc & Arrow</h1>
+<p>Decorative dashed arc with an arrow head, used as an "accent mark" near hero text. Place inside an absolutely-positioned wrapper.</p>
+
+<div class="lib-demo" style="position:relative;min-height:160px;">
+  <div class="hero-arrow-accent" style="position:absolute;left:1rem;top:1rem;display:block;">
+    <svg width="80" height="80" viewBox="0 0 40 40" fill="none">
+      <path d="M8 32 Q8 8 32 8" stroke="hsl(var(--accent-warm))" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+      <polygon points="29,4 35,8 29,12" fill="hsl(var(--accent-warm))" opacity="0.7"/>
+    </svg>
+  </div>
+  <div style="padding-left:7rem;padding-top:2rem;">
+    <p class="label">Eyebrow</p>
+    <h2 style="margin:0;">Headline with accent mark</h2>
+  </div>
+</div>
+
+<h2 style="margin-top:2rem;">Other decorative SVGs</h2>
+<div class="lib-demo" style="display:flex;gap:2rem;align-items:center;">
+  <svg width="60" height="60" viewBox="0 0 40 40" fill="none">
+    <path d="M8 32 Q8 8 32 8" stroke="hsl(var(--accent-warm))" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
+    <polygon points="29,4 35,8 29,12" fill="hsl(var(--accent-warm))" opacity="0.7"/>
+  </svg>
+  <svg width="60" height="60" viewBox="0 0 40 40" fill="none">
+    <path d="M4 20 Q20 4 36 20" stroke="hsl(var(--accent-warm))" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+  </svg>
+  <svg width="60" height="60" viewBox="0 0 40 40" fill="none">
+    <circle cx="20" cy="20" r="14" stroke="hsl(var(--accent-warm))" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.55"/>
+  </svg>
+</div>
+
+<code class="lib-code">&lt;div class="hero-arrow-accent" aria-hidden="true"&gt;
+  &lt;svg width="60" height="60" viewBox="0 0 40 40" fill="none"&gt;
+    &lt;path d="M8 32 Q8 8 32 8" stroke="hsl(var(--accent-warm))"
+          stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/&gt;
+    &lt;polygon points="29,4 35,8 29,12" fill="hsl(var(--accent-warm))" opacity="0.7"/&gt;
+  &lt;/svg&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>

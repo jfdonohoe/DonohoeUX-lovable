@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Image Containers — Library</title><link rel="stylesheet" href="../library.css"></head>
+<body><main class="container-page lib-pagewrap">
+<a href="../index.html" class="lib-back">← Library index</a>
+<p class="label">Module</p><h1>Image Containers</h1>
+<p>Bordered, rounded image frame with a fixed aspect ratio. Drop an <code>&lt;img&gt;</code> inside (cover-fits automatically) or use the placeholder for prototyping.</p>
+
+<div class="lib-demo" style="display:grid;gap:1.5rem;">
+  <div class="hero-image-container aspect-21-9"><div class="placeholder-text"><p class="pt-title">21:9 Hero</p><p class="pt-sub">.aspect-21-9</p></div></div>
+  <div class="hero-image-container aspect-video"><div class="placeholder-text"><p class="pt-title">16:9 Video</p><p class="pt-sub">.aspect-video</p></div></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+    <div class="hero-image-container aspect-square"><div class="placeholder-text"><p class="pt-title">Square</p><p class="pt-sub">.aspect-square</p></div></div>
+    <div class="hero-image-container aspect-portrait"><div class="placeholder-text"><p class="pt-title">3:4</p><p class="pt-sub">.aspect-portrait</p></div></div>
+  </div>
+</div>
+
+<code class="lib-code">&lt;div class="hero-image-container aspect-video"&gt;
+  &lt;img src="..." alt=""&gt;
+&lt;/div&gt;</code>
+<script src="../library.js"></script></main></body></html>
