@@ -666,19 +666,24 @@
         fill: "none",
         class: "viz-arc"
       });
-      path.addEventListener("mouseenter", e => { const xy = ptToContainer(host, e); tip.show(`<strong>${s.label} → ${t.label}</strong> · ${l.value}`, xy.x, xy.y); });
-      path.addEventListener("mouseleave", () => tip.hide());
+      // mouseover/mousemove (instead of mouseenter/leave) prevents flicker
+      // when the cursor crosses between overlapping link paths.
+      const tipText = `<strong>${s.label} → ${t.label}</strong> · ${l.value}`;
+      path.addEventListener("mouseover", e => { const xy = ptToContainer(host, e); tip.show(tipText, xy.x, xy.y); });
+      path.addEventListener("mousemove", e => { const xy = ptToContainer(host, e); tip.show(tipText, xy.x, xy.y); });
       svg.appendChild(path);
     });
-    // nodes
+    // nodes — non-interactive so they don't intercept hover from the link paths
     data.nodes.forEach((n, i) => {
-      const r = el("rect", { x: n.x, y: n.y, width: colW, height: n.h, rx: 2, fill: colors[i % colors.length] });
+      const r = el("rect", { x: n.x, y: n.y, width: colW, height: n.h, rx: 2, fill: colors[i % colors.length], "pointer-events": "none" });
       svg.appendChild(r);
-      const t = el("text", { x: n.x + (n.column == colKeys[colKeys.length - 1] ? -8 : colW + 8), y: n.y + n.h / 2 + 4, "text-anchor": (n.column == colKeys[colKeys.length - 1] ? "end" : "start") });
+      const t = el("text", { x: n.x + (n.column == colKeys[colKeys.length - 1] ? -8 : colW + 8), y: n.y + n.h / 2 + 4, "text-anchor": (n.column == colKeys[colKeys.length - 1] ? "end" : "start"), "pointer-events": "none" });
       t.setAttribute("style", "font-family:Inter,sans-serif;font-size:12px;fill:hsl(var(--text-body));");
       t.textContent = n.label;
       svg.appendChild(t);
     });
+    // Hide tooltip only when leaving the entire chart, not when crossing paths
+    svg.addEventListener("mouseleave", () => tip.hide());
     host.appendChild(svg);
   }
 
